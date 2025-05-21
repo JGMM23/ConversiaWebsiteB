@@ -36,7 +36,10 @@ export default function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/">
           <div className="flex items-center space-x-2">
-            <span className="text-primary text-2xl font-bold">Conversia AI</span>
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+              <i className="ri-chat-smile-line text-white text-xl"></i>
+            </div>
+            <span className="text-primary text-2xl font-bold">CONVERSIA AI</span>
           </div>
         </Link>
         

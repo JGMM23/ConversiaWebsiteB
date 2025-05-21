@@ -12,7 +12,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Elevate commercial performance with AI-powered coaching
+              Elevate Sales Performance with AI-Powered Coaching
             </h1>
             <p className="text-lg md:text-xl text-muted mb-8 max-w-lg">
               Conversia AI helps healthcare technology teams prepare for high-stakes customer conversations with AI-powered coaching that drives results.
@@ -20,7 +20,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#contact" 
-                className="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
                 Join VIP Program
               </a>
