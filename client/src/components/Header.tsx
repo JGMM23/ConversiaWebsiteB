@@ -6,7 +6,7 @@ import conversiaLogo from "../assets/conversia-logo.png";
 
 const navLinks = [
   { name: "Explore", href: "#solutions" },
-  { name: "Blog", href: "#blog" },
+  { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
 ];
 
