@@ -71,57 +71,9 @@ export default function Contact() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-5 gap-8 max-w-6xl mx-auto">
-          <div className="md:col-span-2">
-            <div className="bg-accent rounded-xl p-8 h-full">
-              <h3 className="text-xl font-semibold mb-4">VIP Program Benefits</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <i className="ri-check-line text-primary text-xl mt-0.5 mr-2"></i>
-                  <span>Priority implementation support and customization</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="ri-check-line text-primary text-xl mt-0.5 mr-2"></i>
-                  <span>White-glove onboarding and training for your team</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="ri-check-line text-primary text-xl mt-0.5 mr-2"></i>
-                  <span>Preferred pricing and early access to new features</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="ri-check-line text-primary text-xl mt-0.5 mr-2"></i>
-                  <span>Direct access to our founder and product team</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="ri-check-line text-primary text-xl mt-0.5 mr-2"></i>
-                  <span>Influence product roadmap and future development</span>
-                </li>
-              </ul>
-              
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                    <i className="ri-mail-line text-primary"></i>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Email</h4>
-                    <p className="text-muted">sales@myconversia.com</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                    <i className="ri-global-line text-primary"></i>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Website</h4>
-                    <p className="text-muted">www.myconversia.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-3xl mx-auto">
           
-          <div className="md:col-span-3">
+          <div>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
