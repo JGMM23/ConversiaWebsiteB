@@ -97,43 +97,7 @@ export default function Solutions() {
             </ul>
           </div>
         </div>
-        
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-primary/20">
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-2/3 md:pr-8">
-              <h3 className="text-2xl font-semibold mb-4">Why Conversia AI?</h3>
-              <p className="text-muted mb-6">
-                Because we're designed specifically for the workflows and complexity of healthcare tech, with enterprise-grade privacy and security built in.
-              </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center">
-                  <i className="ri-check-line text-primary text-xl mr-2"></i>
-                  <span>Customized GenAI trained on your data, workflows and tactics</span>
-                </li>
-                <li className="flex items-center">
-                  <i className="ri-check-line text-primary text-xl mr-2"></i>
-                  <span>Consistent experience across teams</span>
-                </li>
-                <li className="flex items-center">
-                  <i className="ri-check-line text-primary text-xl mr-2"></i>
-                  <span>LLMs agnostic - the right model for each use case</span>
-                </li>
-                <li className="flex items-center">
-                  <i className="ri-check-line text-primary text-xl mr-2"></i>
-                  <span>Deployed in days with white glove implementation</span>
-                </li>
-              </ul>
-              <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors">
-                Get a demo
-              </a>
-            </div>
-            <div className="md:w-1/3 mt-6 md:mt-0 flex items-center justify-center">
-              <span className="text-6xl text-primary">
-                <i className="ri-rocket-line"></i>
-              </span>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
