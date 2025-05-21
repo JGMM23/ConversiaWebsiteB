@@ -11,51 +11,42 @@ export default function About() {
     <Layout>
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4">
-          {/* Hero section */}
-          <div className="max-w-4xl mx-auto mb-16 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Our Mission</h1>
-            <p className="text-xl text-muted">
-              We empower commercial teams with a unified GenAI platform that accelerates performance, reduces costs, and scales excellence.
-            </p>
-          </div>
-
-          {/* Vision section */}
-          <div className="bg-accent rounded-xl p-8 mb-16">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6 text-primary">Our Vision</h2>
-              <p className="text-lg text-muted mb-8">
-                We deliver customizable, secure AI-powered applications and agents that replicate expert-level execution, streamline workflows, and institutionalize best practices.
-              </p>
-              <p className="text-lg text-muted mb-8">
-                We strive to eliminate dozens of copilots and point solutions to help you unlock competitive advantage.
-              </p>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div>
-                  <div className="bg-[#005DA5] text-white h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <i className="ri-team-line text-3xl"></i>
+          {/* Mission & Vision section with visual elements */}
+          <div className="mb-16 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 -mt-16 -mr-16 bg-gradient-to-br from-[#005DA5]/20 to-[#72A84D]/20 rounded-full"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 -mb-12 -ml-12 bg-gradient-to-tr from-[#EBAA20]/20 to-[#B32271]/20 rounded-full"></div>
+            
+            <div className="max-w-5xl mx-auto bg-white rounded-xl p-10 shadow-lg border border-primary/10 relative z-10">
+              <div className="flex flex-col md:flex-row items-center">
+                <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">About Conversia AI</h1>
+                  <div className="space-y-6">
+                    <p className="text-lg text-muted">
+                      We empower commercial teams with a unified GenAI platform that accelerates performance, reduces costs, and scales excellence.
+                    </p>
+                    <p className="text-lg text-muted">
+                      We deliver customizable, secure AI-powered applications and agents that replicate expert-level execution, streamline workflows, and institutionalize best practices.
+                    </p>
+                    <p className="text-lg text-muted">
+                      We strive to eliminate dozens of copilots and point solutions to help you unlock competitive advantage.
+                    </p>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-center">Empowering Teams</h3>
-                  <p className="text-muted text-center">
-                    We believe in equipping healthcare technology professionals with the skills they need to excel in every conversation.
-                  </p>
                 </div>
-                <div>
-                  <div className="bg-[#72A84D] text-white h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <i className="ri-ai-generate text-3xl"></i>
+                <div className="md:w-1/2 flex justify-center">
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="bg-[#005DA5] text-white h-36 w-36 rounded-2xl flex items-center justify-center transform hover:scale-105 transition-transform shadow-lg">
+                      <i className="ri-ai-generate text-7xl"></i>
+                    </div>
+                    <div className="bg-[#72A84D] text-white h-36 w-36 rounded-2xl flex items-center justify-center transform hover:scale-105 transition-transform shadow-lg">
+                      <i className="ri-rocket-fill text-7xl"></i>
+                    </div>
+                    <div className="bg-[#EBAA20] text-white h-36 w-36 rounded-2xl flex items-center justify-center transform hover:scale-105 transition-transform shadow-lg">
+                      <i className="ri-team-fill text-7xl"></i>
+                    </div>
+                    <div className="bg-[#B32271] text-white h-36 w-36 rounded-2xl flex items-center justify-center transform hover:scale-105 transition-transform shadow-lg">
+                      <i className="ri-shield-check-fill text-7xl"></i>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-center">AI-Powered Innovation</h3>
-                  <p className="text-muted text-center">
-                    Harnessing the power of artificial intelligence to create personalized learning experiences that drive results.
-                  </p>
-                </div>
-                <div>
-                  <div className="bg-[#EBAA20] text-white h-16 w-16 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <i className="ri-arrow-up-circle-line text-3xl"></i>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-center">Continuous Improvement</h3>
-                  <p className="text-muted text-center">
-                    Committed to ongoing enhancement of our platform based on user feedback and industry advancements.
-                  </p>
                 </div>
               </div>
             </div>
