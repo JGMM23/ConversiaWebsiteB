@@ -11,7 +11,7 @@ export default function About() {
         
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-accent rounded-xl p-8 animate-fade-in" style={{ opacity: 0 }}>
-            <div className="text-primary text-6xl mb-6 flex items-center justify-center h-20 w-20 rounded-full bg-primary/10 shadow-md mx-auto transform hover:scale-105 transition-transform">
+            <div className="text-white text-6xl mb-6 flex items-center justify-center h-20 w-20 rounded-full bg-highlight shadow-md mx-auto transform hover:scale-105 transition-transform">
               <i className="ri-heart-pulse-fill"></i>
             </div>
             <h3 className="text-xl font-semibold mb-3">High-Stakes Conversations</h3>
@@ -21,7 +21,7 @@ export default function About() {
           </div>
           
           <div className="bg-accent rounded-xl p-8 animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
-            <div className="text-primary text-6xl mb-6 flex items-center justify-center h-20 w-20 rounded-full bg-primary/10 shadow-md mx-auto transform hover:scale-105 transition-transform">
+            <div className="text-white text-6xl mb-6 flex items-center justify-center h-20 w-20 rounded-full bg-primary shadow-md mx-auto transform hover:scale-105 transition-transform">
               <i className="ri-time-fill"></i>
             </div>
             <h3 className="text-xl font-semibold mb-3">Limited Provider Time</h3>
@@ -31,7 +31,7 @@ export default function About() {
           </div>
           
           <div className="bg-accent rounded-xl p-8 animate-fade-in" style={{ opacity: 0, animationDelay: "0.3s" }}>
-            <div className="text-primary text-6xl mb-6 flex items-center justify-center h-20 w-20 rounded-full bg-primary/10 shadow-md mx-auto transform hover:scale-105 transition-transform">
+            <div className="text-white text-6xl mb-6 flex items-center justify-center h-20 w-20 rounded-full bg-gradient-to-br from-primary to-highlight shadow-md mx-auto transform hover:scale-105 transition-transform">
               <i className="ri-bubble-chart-fill"></i>
             </div>
             <h3 className="text-xl font-semibold mb-3">Complex Discussions</h3>
