@@ -31,6 +31,10 @@ export default function About() {
                     <p className="text-lg text-muted">
                       We strive to eliminate dozens of copilots and point solutions to help you unlock competitive advantage.
                     </p>
+                    <p className="text-lg flex items-center mt-6 text-primary">
+                      <i className="ri-map-pin-2-fill mr-2 text-xl"></i>
+                      Headquartered in Lexington, MA, just outside Boston
+                    </p>
                   </div>
                 </div>
                 <div className="md:w-1/2 flex justify-center">
