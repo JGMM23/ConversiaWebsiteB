@@ -79,9 +79,11 @@ export default function Blog() {
               {/* Blog post card */}
               <Link href="/blog/health-tech-ai-moment">
                 <div className="bg-white rounded-xl border border-primary/10 overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer h-full flex flex-col">
-                  <div className="h-48 bg-gradient-to-r from-[#4F2582]/90 to-[#B64621]/90 flex items-center justify-center">
-                    <div className="text-center text-white px-6">
-                      <i className="ri-ai-generate text-6xl mb-2"></i>
+                  <div className="h-48 bg-gradient-to-r from-[#005DA5] to-[#008656] flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#E94F3D]/20 rounded-full -mr-10 -mt-10"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#EBAA20]/20 rounded-full -ml-8 -mb-8"></div>
+                    <div className="text-center text-white px-6 relative z-10">
+                      <i className="ri-ai-generate text-6xl mb-2 text-[#EBAA20]"></i>
                       <h3 className="text-lg font-medium">The State of AI in Healthcare</h3>
                     </div>
                   </div>
@@ -103,9 +105,11 @@ export default function Blog() {
 
               {/* Empty placeholder for future blog posts */}
               <div className="bg-white rounded-xl border border-primary/10 overflow-hidden shadow-md h-full flex flex-col opacity-50">
-                <div className="h-48 bg-gradient-to-r from-[#005DA5]/90 to-[#72A84D]/90 flex items-center justify-center">
-                  <div className="text-center text-white px-6">
-                    <i className="ri-article-line text-6xl mb-2"></i>
+                <div className="h-48 bg-gradient-to-r from-[#B32271] to-[#EBAA20] flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#008656]/20 rounded-full -mr-10 -mt-10"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#005DA5]/20 rounded-full -ml-8 -mb-8"></div>
+                  <div className="text-center text-white px-6 relative z-10">
+                    <i className="ri-article-line text-6xl mb-2 text-white"></i>
                     <h3 className="text-lg font-medium">Coming Soon</h3>
                   </div>
                 </div>
