@@ -15,7 +15,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto mb-16 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Our Mission</h1>
             <p className="text-xl text-muted">
-              Empowering customer-facing teams with AI-driven training and coaching, enabling them to master real-world conversations with confidence and impact.
+              We empower commercial teams with a unified GenAI platform that accelerates performance, reduces costs, and scales excellence.
             </p>
           </div>
 
@@ -24,7 +24,10 @@ export default function About() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-6 text-primary">Our Vision</h2>
               <p className="text-lg text-muted mb-8">
-                To empower individuals to perform at their best in challenging conversations, fostering collaboration and unlocking human potential through AI-driven training and coaching.
+                We deliver customizable, secure AI-powered applications and agents that replicate expert-level execution, streamline workflows, and institutionalize best practices.
+              </p>
+              <p className="text-lg text-muted mb-8">
+                We strive to eliminate dozens of copilots and point solutions to help you unlock competitive advantage.
               </p>
               <div className="grid md:grid-cols-3 gap-8">
                 <div>
