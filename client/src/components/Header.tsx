@@ -5,10 +5,9 @@ import { useMobileMenu } from "@/context/MobileMenuContext";
 import conversiaLogo from "../assets/conversia-logo.png";
 
 const navLinks = [
+  { name: "Explore", href: "#solutions" },
+  { name: "Blog", href: "#blog" },
   { name: "About", href: "#about" },
-  { name: "Solutions", href: "#solutions" },
-  { name: "Use Cases", href: "#use-cases" },
-  { name: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
