@@ -48,12 +48,20 @@ export default function Hero() {
         </div>
         
         <div className="mt-16 md:mt-24 py-8 border-t border-gray-200">
-          <p className="text-center text-muted mb-6">Trusted by leading healthcare technology companies</p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
-            <span className="text-xl font-semibold text-muted">Johnson & Johnson</span>
-            <span className="text-xl font-semibold text-muted">Medtronic</span>
-            <span className="text-xl font-semibold text-muted">Fresenius</span>
-            <span className="text-xl font-semibold text-muted">GE Healthcare</span>
+          <p className="text-center text-muted mb-6">A revolutionary AI platform for healthcare technology teams</p>
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+            <div className="flex items-center gap-2">
+              <i className="ri-shield-check-line text-2xl text-highlight"></i>
+              <span className="text-lg font-medium text-muted">Enterprise Security</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <i className="ri-ai-generate text-2xl text-highlight"></i>
+              <span className="text-lg font-medium text-muted">Custom GenAI Models</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <i className="ri-timer-line text-2xl text-highlight"></i>
+              <span className="text-lg font-medium text-muted">Rapid Deployment</span>
+            </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@ import Hero from "@/pages/sections/Hero";
 import About from "@/pages/sections/About";
 import Solutions from "@/pages/sections/Solutions";
 import UseCases from "@/pages/sections/UseCases";
-import Testimonials from "@/pages/sections/Testimonials";
 import Contact from "@/pages/sections/Contact";
 
 export default function Home() {
@@ -42,7 +41,6 @@ export default function Home() {
       <About />
       <Solutions />
       <UseCases />
-      <Testimonials />
       <Contact />
     </>
   );
