@@ -65,39 +65,56 @@ export default function UseCases() {
         </div>
         
         <div className="bg-white rounded-xl p-8 shadow-lg border border-primary/20 mb-12">
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-2/3 md:pr-8">
-              <h3 className="text-2xl font-semibold mb-4">Why Conversia AI?</h3>
-              <p className="text-muted mb-6">
-                Because we're designed specifically for the workflows and complexity of healthcare tech, with enterprise-grade privacy and security built in.
+          <h3 className="text-3xl font-bold text-primary text-center mb-8">
+            Why Conversia AI? Because it's Designed for the Workflows and Complexity of Healthcare Tech
+          </h3>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex flex-col items-center p-6 bg-accent rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <i className="ri-brain-line text-primary text-5xl"></i>
+              </div>
+              <h4 className="text-xl font-semibold text-center mb-3">Customized GenAI</h4>
+              <p className="text-muted text-center">
+                Trained on your data, workflows and tactics to provide personalized coaching
               </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center">
-                  <i className="ri-check-line text-primary text-xl mr-2"></i>
-                  <span>Customized GenAI trained on your data, workflows and tactics</span>
-                </li>
-                <li className="flex items-center">
-                  <i className="ri-check-line text-primary text-xl mr-2"></i>
-                  <span>Consistent experience across teams</span>
-                </li>
-                <li className="flex items-center">
-                  <i className="ri-check-line text-primary text-xl mr-2"></i>
-                  <span>LLMs agnostic - the right model for each use case</span>
-                </li>
-                <li className="flex items-center">
-                  <i className="ri-check-line text-primary text-xl mr-2"></i>
-                  <span>Deployed in days with white glove implementation</span>
-                </li>
-              </ul>
-              <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors">
-                Get a demo
-              </a>
             </div>
-            <div className="md:w-1/3 mt-6 md:mt-0 flex items-center justify-center">
-              <span className="text-6xl text-primary">
-                <i className="ri-rocket-line"></i>
-              </span>
+            
+            <div className="flex flex-col items-center p-6 bg-accent rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <i className="ri-shield-keyhole-line text-primary text-5xl"></i>
+              </div>
+              <h4 className="text-xl font-semibold text-center mb-3">Enterprise-grade Security</h4>
+              <p className="text-muted text-center">
+                Privacy & security built-in, compliant as an internal tool
+              </p>
             </div>
+            
+            <div className="flex flex-col items-center p-6 bg-accent rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <i className="ri-team-line text-primary text-5xl"></i>
+              </div>
+              <h4 className="text-xl font-semibold text-center mb-3">Consistent Experience</h4>
+              <p className="text-muted text-center">
+                Across teams with LLMs agnostic approach - the right model for each use case
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center p-6 bg-accent rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <i className="ri-rocket-line text-primary text-5xl"></i>
+              </div>
+              <h4 className="text-xl font-semibold text-center mb-3">Rapid Deployment</h4>
+              <p className="text-muted text-center">
+                Deployed in days with no IT lift and white glove implementation & support
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex justify-center mt-8">
+            <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-4 px-8 rounded-lg transition-colors text-lg">
+              Get a demo
+            </a>
           </div>
         </div>
         
