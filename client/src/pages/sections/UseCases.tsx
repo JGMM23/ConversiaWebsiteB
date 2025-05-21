@@ -10,7 +10,7 @@ export default function UseCases() {
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0 }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-[#FF7E42] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
+                <div className="bg-[#E94F3D] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
                   <i className="ri-rocket-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Faster Onboarding</h3>
@@ -24,7 +24,7 @@ export default function UseCases() {
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-[#7B42FF] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
+                <div className="bg-[#005DA5] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
                   <i className="ri-line-chart-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Improved Performance</h3>
@@ -38,7 +38,7 @@ export default function UseCases() {
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0, animationDelay: "0.3s" }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-[#00C2A8] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
+                <div className="bg-[#008656] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
                   <i className="ri-money-dollar-circle-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Lower Training Costs</h3>
@@ -52,7 +52,7 @@ export default function UseCases() {
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0, animationDelay: "0.4s" }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-[#FF42A1] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
+                <div className="bg-[#B32271] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
                   <i className="ri-shield-check-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Greater Consistency</h3>
