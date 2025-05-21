@@ -5,7 +5,7 @@ import { useMobileMenu } from "@/context/MobileMenuContext";
 import conversiaLogo from "../assets/conversia-logo.png";
 
 const navLinks = [
-  { name: "Explore", href: "#solutions" },
+  { name: "Explore", href: "/" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
 ];
