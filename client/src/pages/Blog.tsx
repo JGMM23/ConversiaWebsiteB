@@ -1,12 +1,65 @@
 import { Link } from "wouter";
 import Layout from "@/components/Layout";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+
 
 export default function Blog() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
   useEffect(() => {
     // Scroll to top when page loads
     window.scrollTo(0, 0);
   }, []);
+  
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email) {
+      toast({
+        title: "Email required",
+        description: "Please enter your email address to subscribe.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+        credentials: 'include'
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to subscribe");
+      }
+      
+      toast({
+        title: "Success!",
+        description: data.message || "You've been subscribed to our newsletter!",
+        variant: "default",
+      });
+      
+      // Clear the form
+      setEmail("");
+    } catch (error: any) {
+      toast({
+        title: "Subscription failed",
+        description: error.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <Layout>
@@ -76,16 +129,31 @@ export default function Blog() {
             <p className="text-muted mb-6">
               Subscribe to our newsletter to get the latest insights on AI in healthcare technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
               <input 
                 type="email" 
                 placeholder="Your email address" 
                 className="flex-grow px-4 py-3 rounded-lg border border-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/50"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={isSubmitting}
+                required
               />
-              <button className="bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors">
-                Subscribe
+              <button 
+                type="submit" 
+                className="bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <i className="ri-loader-4-line animate-spin mr-2"></i>
+                    Subscribing...
+                  </span>
+                ) : (
+                  "Subscribe"
+                )}
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
