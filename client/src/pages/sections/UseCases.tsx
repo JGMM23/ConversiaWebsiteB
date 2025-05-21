@@ -10,8 +10,8 @@ export default function UseCases() {
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0 }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-accent rounded-full p-3 mr-4">
-                  <i className="ri-rocket-line text-primary text-2xl"></i>
+                <div className="bg-highlight text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14">
+                  <i className="ri-rocket-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Faster Onboarding</h3>
               </div>
@@ -24,8 +24,8 @@ export default function UseCases() {
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-accent rounded-full p-3 mr-4">
-                  <i className="ri-line-chart-line text-primary text-2xl"></i>
+                <div className="bg-primary text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14">
+                  <i className="ri-line-chart-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Improved Performance</h3>
               </div>
@@ -38,8 +38,8 @@ export default function UseCases() {
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0, animationDelay: "0.3s" }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-accent rounded-full p-3 mr-4">
-                  <i className="ri-money-dollar-circle-line text-primary text-2xl"></i>
+                <div className="bg-gradient-to-br from-highlight to-primary text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14">
+                  <i className="ri-money-dollar-circle-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Lower Training Costs</h3>
               </div>
@@ -52,8 +52,8 @@ export default function UseCases() {
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0, animationDelay: "0.4s" }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-accent rounded-full p-3 mr-4">
-                  <i className="ri-shield-check-line text-primary text-2xl"></i>
+                <div className="bg-gradient-to-r from-primary to-highlight text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14">
+                  <i className="ri-shield-check-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Greater Consistency</h3>
               </div>
