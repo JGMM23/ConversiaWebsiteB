@@ -12,17 +12,17 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Break language barriers with AI-powered localization
+              Elevate commercial performance with AI-powered coaching
             </h1>
             <p className="text-lg md:text-xl text-muted mb-8 max-w-lg">
-              Conversia helps businesses connect with global audiences through culturally relevant, AI-powered localization that preserves your authentic voice.
+              Conversia AI helps healthcare technology teams prepare for high-stakes customer conversations with AI-powered coaching that drives results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#contact" 
                 className="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
-                Get Started
+                Join VIP Program
               </a>
               <a 
                 href="#solutions" 
@@ -40,20 +40,20 @@ export default function Hero() {
           >
             {/* Hero image */}
             <img 
-              src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Global communication concept" 
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+              alt="Healthcare technology professionals in conversation" 
               className="rounded-xl shadow-xl mx-auto"
             />
           </motion.div>
         </div>
         
         <div className="mt-16 md:mt-24 py-8 border-t border-gray-200">
-          <p className="text-center text-muted mb-6">Trusted by innovative companies worldwide</p>
+          <p className="text-center text-muted mb-6">Trusted by leading healthcare technology companies</p>
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
-            <span className="text-xl font-semibold text-muted">Company A</span>
-            <span className="text-xl font-semibold text-muted">Company B</span>
-            <span className="text-xl font-semibold text-muted">Company C</span>
-            <span className="text-xl font-semibold text-muted">Company D</span>
+            <span className="text-xl font-semibold text-muted">Johnson & Johnson</span>
+            <span className="text-xl font-semibold text-muted">Medtronic</span>
+            <span className="text-xl font-semibold text-muted">Fresenius</span>
+            <span className="text-xl font-semibold text-muted">GE Healthcare</span>
           </div>
         </div>
       </div>

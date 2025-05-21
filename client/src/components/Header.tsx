@@ -7,6 +7,7 @@ const navLinks = [
   { name: "About", href: "#about" },
   { name: "Solutions", href: "#solutions" },
   { name: "Use Cases", href: "#use-cases" },
+  { name: "Testimonials", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -34,9 +35,9 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/">
-          <a className="flex items-center space-x-2">
-            <span className="text-primary text-2xl font-bold">Conversia</span>
-          </a>
+          <div className="flex items-center space-x-2">
+            <span className="text-primary text-2xl font-bold">Conversia AI</span>
+          </div>
         </Link>
         
         {/* Desktop Menu */}

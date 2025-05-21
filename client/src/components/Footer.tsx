@@ -4,9 +4,9 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <a href="#" className="text-2xl font-bold text-white mb-4 inline-block">Conversia</a>
+            <a href="#" className="text-2xl font-bold text-white mb-4 inline-block">Conversia AI</a>
             <p className="text-gray-400 mb-6">
-              AI-powered localization that preserves your authentic voice in any language.
+              AI-powered coaching for healthcare technology teams to elevate commercial performance.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
@@ -24,10 +24,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">AI Translation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cultural Adaptation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Content Integration</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Quality Assurance</a></li>
+              <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">Private Chat</a></li>
+              <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">AI Role Play</a></li>
+              <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">Pre-Call Planning</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">VIP Program</a></li>
             </ul>
           </div>
           
@@ -35,18 +35,25 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#testimonials" className="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href="#use-cases" className="text-gray-400 hover:text-white transition-colors">Use Cases</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-3">
+              <li className="flex items-center">
+                <i className="ri-mail-line mr-2 text-gray-400"></i>
+                <span className="text-gray-400">sales@myconversia.com</span>
+              </li>
+              <li className="flex items-center">
+                <i className="ri-global-line mr-2 text-gray-400"></i>
+                <span className="text-gray-400">www.myconversia.com</span>
+              </li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a></li>
             </ul>
           </div>
         </div>

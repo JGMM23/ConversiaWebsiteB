@@ -3,40 +3,40 @@ export default function About() {
     <section id="about" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Localization Matters</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">In Healthcare Tech, Every Conversation Counts</h2>
           <p className="text-lg text-muted">
-            In today's global marketplace, speaking your customer's language isn't just about translation—it's about cultural connection, trust, and authentic engagement.
+            Customer conversations in healthcare technology are high-stakes and directly influence critical patient care decisions. Success requires earning trust from highly knowledgeable experts.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-accent rounded-xl p-8 animate-fade-in" style={{ opacity: 0 }}>
             <div className="text-primary text-4xl mb-4">
-              <i className="ri-global-line"></i>
+              <i className="ri-heart-pulse-line"></i>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Global Reach</h3>
+            <h3 className="text-xl font-semibold mb-3">High-Stakes Conversations</h3>
             <p className="text-muted">
-              Access new markets and connect with international audiences through perfectly localized content that respects cultural nuances.
+              Healthcare tech conversations directly influence patient care decisions and require both clinical and technical expertise to navigate effectively.
             </p>
           </div>
           
           <div className="bg-accent rounded-xl p-8 animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
             <div className="text-primary text-4xl mb-4">
-              <i className="ri-emotion-line"></i>
+              <i className="ri-time-line"></i>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Cultural Relevance</h3>
+            <h3 className="text-xl font-semibold mb-3">Limited Provider Time</h3>
             <p className="text-muted">
-              Building trust requires more than correct grammar—it demands cultural understanding that resonates with local audiences.
+              Healthcare providers are busier than ever, with minimal time for education and interactions with industry representatives.
             </p>
           </div>
           
           <div className="bg-accent rounded-xl p-8 animate-fade-in" style={{ opacity: 0, animationDelay: "0.3s" }}>
             <div className="text-primary text-4xl mb-4">
-              <i className="ri-line-chart-line"></i>
+              <i className="ri-bubble-chart-line"></i>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Business Growth</h3>
+            <h3 className="text-xl font-semibold mb-3">Complex Discussions</h3>
             <p className="text-muted">
-              Companies investing in quality localization see 1.5x higher conversion rates and increased customer loyalty.
+              Effective healthcare tech conversations require blending technology, science, clinical knowledge, regulatory concerns, and business insights.
             </p>
           </div>
         </div>
@@ -44,33 +44,37 @@ export default function About() {
         <div className="mt-20 md:mt-32">
           <div className="flex flex-col md:flex-row md:items-center">
             <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">The Localization Challenge</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Traditional Sales Readiness Struggles</h2>
               <p className="text-lg text-muted mb-6">
-                Traditional localization is slow, expensive, and often fails to capture the authentic voice behind your message. Businesses need a solution that scales without sacrificing quality.
+                Healthcare technology teams need better preparation for critical customer conversations than traditional training methods can provide.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
-                  <span className="text-muted">Time-consuming manual processes</span>
+                  <span className="text-muted">Long onboarding and ramp when launching products and campaigns</span>
                 </li>
                 <li className="flex items-start">
                   <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
-                  <span className="text-muted">High costs for professional translation</span>
+                  <span className="text-muted">Manager bandwidth limits coaching opportunities</span>
                 </li>
                 <li className="flex items-start">
                   <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
-                  <span className="text-muted">Inconsistent brand voice across languages</span>
+                  <span className="text-muted">Inconsistent rep preparation and performance</span>
                 </li>
                 <li className="flex items-start">
                   <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
-                  <span className="text-muted">Difficulty maintaining content updates</span>
+                  <span className="text-muted">Poor visibility into training effectiveness and ROI</span>
+                </li>
+                <li className="flex items-start">
+                  <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
+                  <span className="text-muted">Lack of real-world practice opportunities</span>
                 </li>
               </ul>
             </div>
             <div className="md:w-1/2 animate-fade-in" style={{ opacity: 0 }}>
               <img 
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                alt="Teams collaborating across borders" 
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                alt="Healthcare professionals in discussion" 
                 className="rounded-xl shadow-lg"
               />
             </div>
