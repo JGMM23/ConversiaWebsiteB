@@ -4,9 +4,6 @@ export default function UseCases() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">What Healthcare Tech Leaders Can Expect</h2>
-          <p className="text-lg text-muted">
-            AI is ready, and your teams can't wait. See the proven ROI and benefits healthcare technology leaders are experiencing with Conversia AI.
-          </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 mb-12">
