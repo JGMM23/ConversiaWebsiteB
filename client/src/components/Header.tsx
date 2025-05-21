@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 import { useScroll } from "@/hooks/use-scroll";
 import { useMobileMenu } from "@/context/MobileMenuContext";
+import conversiaLogo from "../assets/conversia-logo.png";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -35,9 +36,7 @@ export default function Header() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <i className="ri-chat-smile-line text-white text-xl"></i>
-            </div>
+            <img src={conversiaLogo} alt="Conversia AI Logo" className="h-10 w-auto" />
             <span className="text-primary text-2xl font-bold">CONVERSIA AI</span>
           </div>
         </Link>
