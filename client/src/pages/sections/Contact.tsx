@@ -236,7 +236,7 @@ export default function Contact() {
                 <Button 
                   type="submit" 
                   disabled={mutation.isPending} 
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
                 >
                   {mutation.isPending ? "Submitting..." : "Apply for VIP Program"}
                 </Button>

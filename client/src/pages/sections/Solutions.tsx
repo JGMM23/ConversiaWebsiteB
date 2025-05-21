@@ -123,7 +123,7 @@ export default function Solutions() {
                   <span>Deployed in days with white glove implementation</span>
                 </li>
               </ul>
-              <a href="#contact" className="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+              <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors">
                 Join VIP Program
               </a>
             </div>

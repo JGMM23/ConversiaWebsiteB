@@ -108,7 +108,7 @@ export default function UseCases() {
                 <p className="text-muted mb-6">
                   Join our exclusive program for healthcare tech leaders looking to gain a competitive advantage with AI-powered conversation coaching.
                 </p>
-                <a href="#contact" className="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full text-center">
+                <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full text-center">
                   Apply for VIP Program
                 </a>
               </div>
