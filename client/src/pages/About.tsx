@@ -55,7 +55,7 @@ export default function About() {
 
           {/* Our Team section */}
           <div className="max-w-5xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold mb-12 text-primary text-center">Leadership</h2>
+            <h2 className="text-3xl font-bold mb-12 text-primary text-center">Leadership Team</h2>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3">
                 <div className="h-64 w-64 bg-accent rounded-xl mx-auto mb-6 overflow-hidden shadow-lg">
