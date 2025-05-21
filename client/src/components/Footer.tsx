@@ -27,7 +27,7 @@ export default function Footer() {
               <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">Private Chat</a></li>
               <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">AI Role Play</a></li>
               <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">Pre-Call Planning</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">VIP Program</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Get a demo</a></li>
             </ul>
           </div>
           

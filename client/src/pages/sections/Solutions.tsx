@@ -124,7 +124,7 @@ export default function Solutions() {
                 </li>
               </ul>
               <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors">
-                Join VIP Program
+                Get a demo
               </a>
             </div>
             <div className="md:w-1/3 mt-6 md:mt-0 flex items-center justify-center">

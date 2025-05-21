@@ -65,9 +65,9 @@ export default function Contact() {
     <section id="contact" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Early Adopter VIP Program</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Request a Demo</h2>
           <p className="text-lg text-muted">
-            Be among the first healthcare technology leaders to implement Conversia AI's coaching platform and gain a competitive advantage.
+            See how Conversia AI can help your healthcare technology team improve performance with AI-powered coaching.
           </p>
         </div>
         
@@ -238,7 +238,7 @@ export default function Contact() {
                   disabled={mutation.isPending} 
                   className="w-full bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
                 >
-                  {mutation.isPending ? "Submitting..." : "Apply for VIP Program"}
+                  {mutation.isPending ? "Submitting..." : "Request Demo"}
                 </Button>
               </form>
             </Form>

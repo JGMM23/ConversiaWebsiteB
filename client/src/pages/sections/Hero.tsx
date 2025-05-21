@@ -22,7 +22,7 @@ export default function Hero() {
                 href="#contact" 
                 className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
               >
-                Join VIP Program
+                Get a demo
               </a>
               <a 
                 href="#solutions" 

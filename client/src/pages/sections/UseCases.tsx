@@ -104,12 +104,12 @@ export default function UseCases() {
             </div>
             <div className="md:w-1/2">
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h4 className="text-xl font-semibold mb-4">Early Adopter VIP Program</h4>
+                <h4 className="text-xl font-semibold mb-4">Try Conversia AI Today</h4>
                 <p className="text-muted mb-6">
-                  Join our exclusive program for healthcare tech leaders looking to gain a competitive advantage with AI-powered conversation coaching.
+                  See how Conversia AI can help your healthcare technology team improve performance with personalized coaching.
                 </p>
                 <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors w-full text-center">
-                  Apply for VIP Program
+                  Get a demo
                 </a>
               </div>
             </div>
