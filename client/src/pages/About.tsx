@@ -101,58 +101,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Our Values section */}
-          <div className="bg-white rounded-xl p-8 shadow-lg border border-primary/20 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-primary text-center">Our Values</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex items-start">
-                <div className="bg-[#B32271] text-white h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <i className="ri-user-heart-line text-2xl"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Human-Centered AI</h3>
-                  <p className="text-muted">
-                    We develop AI solutions that augment human capabilities rather than replace them, enhancing the skills that make healthcare conversations effective.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-[#005DA5] text-white h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <i className="ri-shield-check-line text-2xl"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Security & Trust</h3>
-                  <p className="text-muted">
-                    We maintain the highest standards of data privacy and security, earning the trust of healthcare organizations and their teams.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-[#72A84D] text-white h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <i className="ri-global-line text-2xl"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Inclusivity</h3>
-                  <p className="text-muted">
-                    We design for diverse users and scenarios, ensuring our AI coaching is effective across different backgrounds and communication styles.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-[#EBAA20] text-white h-12 w-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <i className="ri-lightbulb-line text-2xl"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Innovation</h3>
-                  <p className="text-muted">
-                    We constantly push the boundaries of what's possible with AI in conversation coaching, staying at the forefront of technological advancement.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact CTA */}
+{/* Contact CTA */}
           <div className="mt-16 text-center">
             <h2 className="text-2xl font-bold mb-4">Ready to transform your team's capabilities?</h2>
             <a 
