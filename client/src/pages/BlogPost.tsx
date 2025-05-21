@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Link, useParams } from "wouter";
-import Layout from "@/components/Layout";
 
 // Blog post data (in a real app, this would come from an API)
 const blogPosts = {
@@ -112,87 +111,83 @@ export default function BlogPost() {
   // If post not found
   if (!post) {
     return (
-      <Layout>
-        <div className="pt-24 pb-16">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl font-bold mb-6">Post not found</h1>
-            <p className="mb-8">The blog post you're looking for doesn't exist or has been moved.</p>
-            <Link href="/blog">
-              <a className="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg transition-colors">
-                Return to blog
-              </a>
-            </Link>
-          </div>
+      <div className="pt-24 pb-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold mb-6">Post not found</h1>
+          <p className="mb-8">The blog post you're looking for doesn't exist or has been moved.</p>
+          <Link href="/blog">
+            <a className="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg transition-colors">
+              Return to blog
+            </a>
+          </Link>
         </div>
-      </Layout>
+      </div>
     );
   }
 
   return (
-    <Layout>
-      <div className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
-          {/* Blog post header */}
-          <div className="max-w-3xl mx-auto mb-12">
-            <Link href="/blog">
-              <a className="inline-flex items-center text-primary hover:text-primary/80 mb-6 transition-colors">
-                <i className="ri-arrow-left-line mr-2"></i>
-                Back to all posts
-              </a>
-            </Link>
-            
-            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-primary">{post.title}</h1>
-            
-            <div className="flex items-center mb-8">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
-                <span className="font-bold">{post.author.split(' ').map(name => name[0]).join('')}</span>
-              </div>
-              <div>
-                <p className="font-medium">{post.author}</p>
-                <p className="text-muted text-sm">{post.authorTitle}</p>
-              </div>
-              <div className="ml-auto flex items-center text-sm text-muted">
-                <span className="mr-4">{post.date}</span>
-                <span className="flex items-center">
-                  <i className="ri-time-line mr-1"></i> {post.readTime}
-                </span>
-              </div>
+    <div className="pt-24 pb-16">
+      <div className="container mx-auto px-4">
+        {/* Blog post header */}
+        <div className="max-w-3xl mx-auto mb-12">
+          <Link href="/blog">
+            <a className="inline-flex items-center text-primary hover:text-primary/80 mb-6 transition-colors">
+              <i className="ri-arrow-left-line mr-2"></i>
+              Back to all posts
+            </a>
+          </Link>
+          
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-primary">{post.title}</h1>
+          
+          <div className="flex items-center mb-8">
+            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+              <span className="font-bold">{post.author.split(' ').map(name => name[0]).join('')}</span>
+            </div>
+            <div>
+              <p className="font-medium">{post.author}</p>
+              <p className="text-muted text-sm">{post.authorTitle}</p>
+            </div>
+            <div className="ml-auto flex items-center text-sm text-muted">
+              <span className="mr-4">{post.date}</span>
+              <span className="flex items-center">
+                <i className="ri-time-line mr-1"></i> {post.readTime}
+              </span>
             </div>
           </div>
+        </div>
 
-          {/* Blog post content */}
-          <div className="max-w-3xl mx-auto prose lg:prose-lg prose-slate">
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          </div>
+        {/* Blog post content */}
+        <div className="max-w-3xl mx-auto prose lg:prose-lg prose-slate">
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </div>
 
-          {/* Share and comments section */}
-          <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-slate-200">
-            <div className="flex flex-col sm:flex-row justify-between items-center">
-              <div className="mb-4 sm:mb-0">
-                <span className="text-muted mr-4">Share this post:</span>
-                <div className="inline-flex space-x-4">
-                  <a href="#" className="text-[#1877F2] hover:opacity-80 transition-opacity">
-                    <i className="ri-facebook-circle-fill text-2xl"></i>
-                  </a>
-                  <a href="#" className="text-[#1DA1F2] hover:opacity-80 transition-opacity">
-                    <i className="ri-twitter-fill text-2xl"></i>
-                  </a>
-                  <a href="#" className="text-[#0077B5] hover:opacity-80 transition-opacity">
-                    <i className="ri-linkedin-fill text-2xl"></i>
-                  </a>
-                </div>
+        {/* Share and comments section */}
+        <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-slate-200">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <div className="mb-4 sm:mb-0">
+              <span className="text-muted mr-4">Share this post:</span>
+              <div className="inline-flex space-x-4">
+                <a href="#" className="text-[#1877F2] hover:opacity-80 transition-opacity">
+                  <i className="ri-facebook-circle-fill text-2xl"></i>
+                </a>
+                <a href="#" className="text-[#1DA1F2] hover:opacity-80 transition-opacity">
+                  <i className="ri-twitter-fill text-2xl"></i>
+                </a>
+                <a href="#" className="text-[#0077B5] hover:opacity-80 transition-opacity">
+                  <i className="ri-linkedin-fill text-2xl"></i>
+                </a>
               </div>
-              <div>
-                <Link href="/blog">
-                  <a className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-2 px-6 rounded-lg transition-colors">
-                    More articles
-                  </a>
-                </Link>
-              </div>
+            </div>
+            <div>
+              <Link href="/blog">
+                <a className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-2 px-6 rounded-lg transition-colors">
+                  More articles
+                </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
