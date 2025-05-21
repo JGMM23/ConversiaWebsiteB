@@ -71,8 +71,8 @@ export default function UseCases() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex flex-col items-center p-6 bg-accent rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                <i className="ri-brain-line text-primary text-5xl"></i>
+              <div className="h-20 w-20 bg-[#B32271] rounded-full flex items-center justify-center mb-4 transform hover:scale-105 transition-transform shadow-md">
+                <i className="ri-brain-line text-white text-5xl"></i>
               </div>
               <h4 className="text-xl font-semibold text-center mb-3">Customized GenAI</h4>
               <p className="text-muted text-center">
@@ -81,8 +81,8 @@ export default function UseCases() {
             </div>
             
             <div className="flex flex-col items-center p-6 bg-accent rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                <i className="ri-shield-keyhole-line text-primary text-5xl"></i>
+              <div className="h-20 w-20 bg-[#005DA5] rounded-full flex items-center justify-center mb-4 transform hover:scale-105 transition-transform shadow-md">
+                <i className="ri-shield-keyhole-line text-white text-5xl"></i>
               </div>
               <h4 className="text-xl font-semibold text-center mb-3">Enterprise-grade Security</h4>
               <p className="text-muted text-center">
@@ -91,8 +91,8 @@ export default function UseCases() {
             </div>
             
             <div className="flex flex-col items-center p-6 bg-accent rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                <i className="ri-team-line text-primary text-5xl"></i>
+              <div className="h-20 w-20 bg-[#72A84D] rounded-full flex items-center justify-center mb-4 transform hover:scale-105 transition-transform shadow-md">
+                <i className="ri-team-line text-white text-5xl"></i>
               </div>
               <h4 className="text-xl font-semibold text-center mb-3">Consistent Experience</h4>
               <p className="text-muted text-center">
@@ -101,8 +101,8 @@ export default function UseCases() {
             </div>
             
             <div className="flex flex-col items-center p-6 bg-accent rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-20 w-20 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                <i className="ri-rocket-line text-primary text-5xl"></i>
+              <div className="h-20 w-20 bg-[#EBAA20] rounded-full flex items-center justify-center mb-4 transform hover:scale-105 transition-transform shadow-md">
+                <i className="ri-rocket-line text-white text-5xl"></i>
               </div>
               <h4 className="text-xl font-semibold text-center mb-3">Rapid Deployment</h4>
               <p className="text-muted text-center">
