@@ -15,13 +15,9 @@ export default function UseCases() {
                 </div>
                 <h3 className="text-xl font-bold">Faster Onboarding</h3>
               </div>
-              <p className="text-muted mb-4 flex-grow">
+              <p className="text-muted mb-4">
                 Reduce onboarding time for new team members and accelerate product launch readiness with AI-powered training and role-play simulations.
               </p>
-              <div className="border-t border-gray-100 pt-4 mt-auto">
-                <span className="text-primary font-medium">Impact:</span>
-                <span className="text-muted ml-2">Quicker revenue impact and faster market penetration</span>
-              </div>
             </div>
           </div>
           
@@ -33,13 +29,9 @@ export default function UseCases() {
                 </div>
                 <h3 className="text-xl font-bold">Improved Performance</h3>
               </div>
-              <p className="text-muted mb-4 flex-grow">
+              <p className="text-muted mb-4">
                 Enhance conversion rates, objection handling, and overall customer satisfaction with consistent AI coaching across your entire team.
               </p>
-              <div className="border-t border-gray-100 pt-4 mt-auto">
-                <span className="text-primary font-medium">Impact:</span>
-                <span className="text-muted ml-2">Higher win rates and improved customer relationships</span>
-              </div>
             </div>
           </div>
           
@@ -51,13 +43,9 @@ export default function UseCases() {
                 </div>
                 <h3 className="text-xl font-bold">Lower Training Costs</h3>
               </div>
-              <p className="text-muted mb-4 flex-grow">
+              <p className="text-muted mb-4">
                 Reduce the number of training hours needed while improving effectiveness, allowing your teams to spend more time with customers.
               </p>
-              <div className="border-t border-gray-100 pt-4 mt-auto">
-                <span className="text-primary font-medium">Impact:</span>
-                <span className="text-muted ml-2">Up to $3.70 return for every $1 invested in AI</span>
-              </div>
             </div>
           </div>
           
@@ -69,13 +57,9 @@ export default function UseCases() {
                 </div>
                 <h3 className="text-xl font-bold">Greater Consistency</h3>
               </div>
-              <p className="text-muted mb-4 flex-grow">
+              <p className="text-muted mb-4">
                 Ensure all team members stay compliant and on-message with consistent AI guidance based on your approved content and strategies.
               </p>
-              <div className="border-t border-gray-100 pt-4 mt-auto">
-                <span className="text-primary font-medium">Impact:</span>
-                <span className="text-muted ml-2">Reduced compliance risk and stronger brand message</span>
-              </div>
             </div>
           </div>
         </div>
