@@ -155,10 +155,13 @@ export default function UseCases() {
             </div>
           </div>
           
-          <div className="flex justify-center mt-8">
-            <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-8 rounded-lg transition-colors">
+          <div className="flex flex-col items-center mt-8">
+            <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-8 rounded-lg transition-colors mb-4">
               Get a demo
             </a>
+            <p className="text-sm text-gray-500 text-center">
+              Sources: McKinsey The State of AI March 2025 and Survey of 1900 companies conducted by Snowflake 2025
+            </p>
           </div>
         </div>
       </div>
