@@ -118,26 +118,47 @@ export default function UseCases() {
           </div>
         </div>
         
-        <div className="bg-accent rounded-xl p-8 shadow-md">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 md:pr-8 mb-6 md:mb-0">
-              <h3 className="text-2xl font-semibold mb-4">AI is Ready. Your Teams Can't Wait.</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <i className="ri-check-line text-primary text-xl mt-0.5 mr-2"></i>
-                  <p className="text-muted">78% of organizations now use AI in at least one business function</p>
-                </li>
-                <li className="flex items-start">
-                  <i className="ri-check-line text-primary text-xl mt-0.5 mr-2"></i>
-                  <p className="text-muted">66% of companies using gen AI in marketing and sales report revenue increases</p>
-                </li>
-                <li className="flex items-start">
-                  <i className="ri-check-line text-primary text-xl mt-0.5 mr-2"></i>
-                  <p className="text-muted">92% of early adopters reported their GenAI initiatives were already paying for themselves</p>
-                </li>
-              </ul>
+        <div className="bg-white rounded-xl p-8 shadow-lg border border-primary/20 overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-40 h-40 -mt-8 -mr-8 bg-gradient-to-br from-primary/10 to-highlight/10 rounded-full"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 -mb-6 -ml-6 bg-gradient-to-tr from-primary/10 to-highlight/10 rounded-full"></div>
+          
+          <h3 className="text-3xl font-bold text-primary text-center mb-8 relative z-10">
+            AI is Ready. Your Teams Can't Wait.
+          </h3>
+          
+          <div className="grid md:grid-cols-3 gap-6 relative z-10">
+            <div className="bg-accent rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow transform hover:scale-102 transition-transform">
+              <div className="flex items-center justify-center mb-4">
+                <div className="text-[#E94F3D] text-4xl font-bold">78%</div>
+              </div>
+              <p className="text-center text-muted">
+                of organizations now use AI in at least one business function
+              </p>
             </div>
-
+            
+            <div className="bg-accent rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow transform hover:scale-102 transition-transform">
+              <div className="flex items-center justify-center mb-4">
+                <div className="text-[#72A84D] text-4xl font-bold">66%</div>
+              </div>
+              <p className="text-center text-muted">
+                of companies using gen AI in marketing and sales report revenue increases
+              </p>
+            </div>
+            
+            <div className="bg-accent rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow transform hover:scale-102 transition-transform">
+              <div className="flex items-center justify-center mb-4">
+                <div className="text-[#005DA5] text-4xl font-bold">92%</div>
+              </div>
+              <p className="text-center text-muted">
+                of early adopters reported their GenAI initiatives were already paying for themselves
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex justify-center mt-8">
+            <a href="#contact" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-8 rounded-lg transition-colors">
+              Get a demo
+            </a>
           </div>
         </div>
       </div>
