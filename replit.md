@@ -80,6 +80,7 @@ Currently implemented schemas:
 1. **User Interactions**:
    - Users browse the marketing website sections
    - Users submit the contact form
+   - Users subscribe to the newsletter
 
 2. **Contact Form Submission**:
    - Form data is validated client-side with Zod schemas
@@ -87,22 +88,29 @@ Currently implemented schemas:
    - Server validates data and returns success/error response
    - UI displays appropriate toast notifications
 
-3. **Authentication Flow** (partially implemented):
-   - User schema exists but full authentication flow is not implemented
+3. **Newsletter Subscription**:
+   - Email is validated client-side
+   - Data is sent to the `/api/subscribe` endpoint
+   - Server validates and stores the email
+   - UI confirms subscription with toast notification
+
+4. **Authentication Flow** (implemented for future use):
+   - User schema exists but full authentication flow is not currently active
 
 ## External Dependencies
 
 ### Frontend Dependencies
 
 - React ecosystem (React, React DOM)
-- Tailwind CSS for styling
+- Tailwind CSS for styling with custom color scheme
 - ShadCN UI / Radix UI for component primitives
-- Framer Motion for animations
-- React Hook Form for form handling
-- Zod for validation
-- Wouter for routing
-- React Query for data fetching
-- Remix icons for iconography
+- Framer Motion for animations and visual effects
+- React Hook Form for form handling and validation
+- Zod for schema validation
+- Wouter for client-side routing
+- React Query for data fetching and state management
+- Lucide React and React Icons for iconography
+- Tailwind animations for enhanced user experience
 
 ### Backend Dependencies
 
