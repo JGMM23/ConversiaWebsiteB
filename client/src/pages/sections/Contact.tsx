@@ -163,24 +163,7 @@ export default function Contact() {
                   )}
                 />
                 
-                <FormField
-                  control={form.control}
-                  name="consent"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                      <FormControl>
-                        <Checkbox 
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormMessage />
-                      </div>
-                    </FormItem>
-                  )}
-                />
+
                 
                 <Button 
                   type="submit" 
