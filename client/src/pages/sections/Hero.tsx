@@ -60,7 +60,7 @@ export default function Hero() {
             </div>
           </motion.div>
           <motion.div 
-            className="md:w-1/2 mt-12 md:mt-0"
+            className="md:w-1/2 mt-12 md:mt-0 flex justify-end"
             initial={{ opacity: 0, y: 20 }}
             animate={{ 
               opacity: 1, 
@@ -78,7 +78,7 @@ export default function Hero() {
             <img 
               src={healthcareTeam} 
               alt="Healthcare team collaborating" 
-              className="rounded-xl shadow-xl ml-auto w-full max-w-xl"
+              className="rounded-xl shadow-xl w-full max-w-xl mr-0"
             />
           </motion.div>
         </div>
