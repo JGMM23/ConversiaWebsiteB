@@ -40,8 +40,8 @@ export default function Hero() {
           >
             {/* Hero image */}
             <img 
-              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Healthcare technology professionals in conversation" 
+              src="/attached_assets/Screenshot 2025-05-22 at 3.14.20 PM.png" 
+              alt="Conversia AI Platform Interface" 
               className="rounded-xl shadow-xl mx-auto"
             />
           </motion.div>
