@@ -71,7 +71,12 @@ export default function About() {
                 </li>
               </ul>
             </div>
-            <div className="md:w-1/2 animate-fade-in" style={{ opacity: 0 }}>
+            <div className="md:w-1/2 animate-fade-in space-y-6" style={{ opacity: 0 }}>
+              <img 
+                src="/healthcare-team.png" 
+                alt="Healthcare technology team discussing strategy" 
+                className="rounded-xl shadow-lg mb-6"
+              />
               <img 
                 src="/medical-training.png" 
                 alt="Healthcare professional learning medical devices in training" 
