@@ -74,8 +74,8 @@ export default function About() {
             <div className="md:w-1/2 animate-fade-in" style={{ opacity: 0 }}>
               <div className="overflow-hidden rounded-xl shadow-lg">
                 <img 
-                  src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                  alt="Healthcare professional with medical equipment" 
+                  src="/healthcare-team.png" 
+                  alt="Healthcare team collaborating" 
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
                 />
               </div>

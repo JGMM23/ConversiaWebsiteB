@@ -75,7 +75,7 @@ export default function Hero() {
           >
             {/* Hero image */}
             <img 
-              src="https://images.pexels.com/photos/7550304/pexels-photo-7550304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+              src="/healthcare-team.png" 
               alt="Conversia AI Platform Interface" 
               className="rounded-xl shadow-xl mx-auto w-full max-w-xl"
             />
