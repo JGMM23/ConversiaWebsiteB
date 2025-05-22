@@ -176,9 +176,6 @@ export default function Contact() {
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel className="text-sm text-muted">
-                          I agree to receive communications from Conversia AI about the VIP program
-                        </FormLabel>
                         <FormMessage />
                       </div>
                     </FormItem>
