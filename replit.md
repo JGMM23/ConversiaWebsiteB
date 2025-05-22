@@ -1,8 +1,8 @@
-# Conversia - AI-Powered Localization Website
+# Conversia - AI-Powered Healthcare Tech Coaching Platform
 
 ## Overview
 
-This project is a modern web application for Conversia, a business offering AI-powered localization services. The application features a marketing website with sections including a hero banner, about, solutions, use cases, testimonials, and a contact form. It's built with React on the frontend and Express.js on the backend, using a PostgreSQL database for data storage via Drizzle ORM.
+This project is a modern web application for Conversia AI, a business offering AI-powered coaching for healthcare technology teams. The application features a marketing website with sections including a hero banner, about, solutions, use cases, testimonials, and a contact form. It's built with React on the frontend and Express.js on the backend, using a PostgreSQL database for data storage via Drizzle ORM.
 
 ## User Preferences
 
@@ -38,6 +38,7 @@ The backend is a Node.js application using Express:
 
 The backend features a simple API endpoint structure with:
 - Contact form submission endpoint
+- Newsletter subscription endpoint
 - Extensible architecture for adding more endpoints
 
 ### Data Layer
@@ -50,13 +51,20 @@ The application uses Drizzle ORM with a PostgreSQL database:
 
 Currently implemented schemas:
 - Users table with username and password fields
+- Subscribers table for newsletter sign-ups
+- Contacts table for contact form submissions
 
 ## Key Components
 
 ### Frontend Components
 
 1. **Layout**: Main layout wrapper with Header and Footer
-2. **Pages**: Home page with multiple sections
+2. **Pages**: 
+   - Home: Landing page with multiple sections (Hero, About, Solutions, Use Cases, Testimonials, Contact)
+   - About: Dedicated about page
+   - Blog: Blog listing page
+   - BlogPost: Individual blog post page
+   - NotFound: 404 error page
 3. **UI Components**: Extensive library of UI components based on ShadCN/Radix UI
 4. **Form Components**: Specialized form components with validation
 
