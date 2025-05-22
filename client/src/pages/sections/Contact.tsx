@@ -63,7 +63,7 @@ export default function Contact() {
     <section id="contact" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Request a Demo</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact Us</h2>
           <p className="text-lg text-muted">
             See how Conversia AI can help your healthcare technology team improve performance with AI-powered coaching.
           </p>
@@ -168,7 +168,7 @@ export default function Contact() {
                   disabled={mutation.isPending} 
                   className="w-full bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 disabled:opacity-70 disabled:transform-none disabled:shadow-none"
                 >
-                  {mutation.isPending ? "Submitting..." : "Request Demo"}
+                  {mutation.isPending ? "Submitting..." : "Contact Us"}
                 </Button>
               </form>
             </Form>
