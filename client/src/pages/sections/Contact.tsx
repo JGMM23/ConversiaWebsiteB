@@ -29,10 +29,8 @@ export default function Contact() {
             
             <div className="mt-10 pt-6 border-t border-gray-200 w-full max-w-md">
               <h3 className="text-xl font-semibold mb-4">Ready to see Conversia AI in action?</h3>
-              <Link href="/get-demo">
-                <a className="inline-block mt-2 bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-10 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
-                  Get a Demo
-                </a>
+              <Link href="/get-demo" className="inline-block mt-2 bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-10 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                Get a Demo
               </Link>
             </div>
           </div>

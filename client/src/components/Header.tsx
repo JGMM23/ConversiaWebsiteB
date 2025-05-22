@@ -42,27 +42,35 @@ export default function Header() {
         </Link>
         
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => 
-            link.name === "Get a Demo" ? (
-              <a 
-                key={link.name}
-                href={link.href}
-                className="bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-2 px-4 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
-              >
-                {link.name}
-              </a>
-            ) : (
-              <a 
-                key={link.name}
-                href={link.href}
-                className="font-medium text-secondary hover:text-primary transition-colors"
-              >
-                {link.name}
-              </a>
-            )
-          )}
-        </nav>
+        <div className="hidden md:flex items-center">
+          <nav className="flex items-center space-x-8 mr-8">
+            {navLinks.map((link) => 
+              link.name === "Get a Demo" ? (
+                <a 
+                  key={link.name}
+                  href={link.href}
+                  className="bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-2 px-4 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <a 
+                  key={link.name}
+                  href={link.href}
+                  className="font-medium text-secondary hover:text-primary transition-colors"
+                >
+                  {link.name}
+                </a>
+              )
+            )}
+          </nav>
+          <a 
+            href="/login" 
+            className="bg-gradient-to-r from-[#B64621] to-[#d65a32] hover:from-[#d65a32] hover:to-[#B64621] text-white font-medium py-2 px-4 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
+          >
+            Log In
+          </a>
+        </div>
         
         {/* Mobile Menu Button */}
         <button 
@@ -98,6 +106,13 @@ export default function Header() {
               </a>
             )
           )}
+          <a 
+            href="/login" 
+            className="bg-gradient-to-r from-[#B64621] to-[#d65a32] hover:from-[#d65a32] hover:to-[#B64621] text-white font-medium py-2 px-4 rounded-lg text-center transition-all shadow-md mt-2"
+            onClick={closeMenu}
+          >
+            Log In
+          </a>
         </nav>
       </div>
     </header>
