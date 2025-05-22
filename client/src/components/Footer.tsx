@@ -1,10 +1,16 @@
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-white py-12">
+    <footer className="bg-[#4F2582] text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <a href="/" className="text-2xl font-bold text-white mb-4 inline-block">Conversia AI</a>
+            <a href="/" className="mb-4 inline-block">
+              <img 
+                src="/attached_assets/Conversia Logo  (3).png" 
+                alt="Conversia AI Logo" 
+                className="h-12 mb-4"
+              />
+            </a>
             <p className="text-gray-300 mb-6">
               A unified GenAI platform empowering commercial teams to accelerate performance and scale excellence.
             </p>
