@@ -100,7 +100,7 @@ export default function About() {
             href="/#contact" 
             className="inline-block bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-8 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
           >
-            Get a demo
+            Get a Demo
           </a>
         </div>
       </div>
