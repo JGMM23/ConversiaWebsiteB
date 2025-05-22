@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import conversiaUI from "../../assets/conversia-ui.png";
 
 export default function Hero() {
   return (
@@ -40,9 +41,9 @@ export default function Hero() {
           >
             {/* Hero image */}
             <img 
-              src="https://images.pexels.com/photos/12792682/pexels-photo-12792682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+              src={conversiaUI} 
               alt="Conversia AI Platform Interface" 
-              className="rounded-xl shadow-xl mx-auto w-full max-w-lg"
+              className="rounded-xl shadow-xl mx-auto w-full max-w-xl"
             />
           </motion.div>
         </div>
