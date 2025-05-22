@@ -33,7 +33,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <i className="ri-mail-line mr-2 text-gray-300"></i>
-                <a href="mailto:info@myconversia.com" className="text-gray-300 hover:text-white transition-colors">info@myconversia.com</a>
+                <a href="mailto:sales@conversia-ai.io" className="text-gray-300 hover:text-white transition-colors">sales@conversia-ai.io</a>
               </li>
               <li className="flex items-center">
                 <i className="ri-map-pin-line mr-2 text-gray-300"></i>
