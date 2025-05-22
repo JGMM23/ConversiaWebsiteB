@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Navigate</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Navigate</h3>
             <ul className="space-y-3">
               <li><a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
               <li><a href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-center">
                 <i className="ri-mail-line mr-2 text-gray-300"></i>
