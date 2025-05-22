@@ -4,12 +4,8 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <a href="/" className="mb-4 inline-block">
-              <img 
-                src="/attached_assets/Conversia Logo  (3).png" 
-                alt="Conversia AI Logo" 
-                className="h-12 mb-4"
-              />
+            <a href="/" className="text-2xl font-bold text-white mb-4 inline-block">
+              <span className="bg-white text-[#4F2582] px-3 py-1 rounded">Conversia AI</span>
             </a>
             <p className="text-gray-300 mb-6">
               A unified GenAI platform empowering commercial teams to accelerate performance and scale excellence.
