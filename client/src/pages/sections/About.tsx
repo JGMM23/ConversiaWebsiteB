@@ -73,8 +73,8 @@ export default function About() {
             </div>
             <div className="md:w-1/2 animate-fade-in" style={{ opacity: 0 }}>
               <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                alt="Healthcare professionals in discussion" 
+                src="../../assets/medical-training.png" 
+                alt="Healthcare professional learning medical devices in training" 
                 className="rounded-xl shadow-lg"
               />
             </div>
