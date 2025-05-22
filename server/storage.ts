@@ -1,4 +1,4 @@
-import { users, subscribers, type User, type InsertUser, type Subscriber } from "@shared/schema";
+import { users, subscribers, contacts, type User, type InsertUser, type Subscriber, type Contact, type InsertContact } from "@shared/schema";
 import { db } from "./db";
 import { eq } from "drizzle-orm";
 
@@ -13,19 +13,27 @@ export interface IStorage {
   // Subscribers methods
   addSubscriber(email: string): Promise<boolean>;
   getSubscribers(): Promise<Subscriber[]>;
+  
+  // Contact form methods
+  submitContactForm(contact: InsertContact): Promise<Contact>;
+  getContactSubmissions(): Promise<Contact[]>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<number, User>;
   private subscribers: Map<number, Subscriber>;
+  private contacts: Map<number, Contact>;
   currentId: number;
   currentSubId: number;
+  currentContactId: number;
 
   constructor() {
     this.users = new Map();
     this.subscribers = new Map();
+    this.contacts = new Map();
     this.currentId = 1;
     this.currentSubId = 1;
+    this.currentContactId = 1;
   }
 
   async getUser(id: number): Promise<User | undefined> {
@@ -70,6 +78,23 @@ export class MemStorage implements IStorage {
   
   async getSubscribers(): Promise<Subscriber[]> {
     return Array.from(this.subscribers.values());
+  }
+  
+  async submitContactForm(contact: InsertContact): Promise<Contact> {
+    const id = this.currentContactId++;
+    const now = new Date();
+    const newContact: Contact = { 
+      ...contact, 
+      id, 
+      createdAt: now 
+    };
+    
+    this.contacts.set(id, newContact);
+    return newContact;
+  }
+  
+  async getContactSubmissions(): Promise<Contact[]> {
+    return Array.from(this.contacts.values());
   }
 }
 
