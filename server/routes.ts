@@ -2,15 +2,11 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { z } from "zod";
-import { insertSubscriberSchema } from "@shared/schema";
+import { insertSubscriberSchema, insertContactSchema } from "@shared/schema";
 
-const contactFormSchema = z.object({
-  name: z.string().min(2),
-  company: z.string().min(2),
-  email: z.string().email(),
-  interest: z.string(),
-  message: z.string().min(10),
-  consent: z.boolean()
+// Extend our insertContactSchema to include any additional fields needed for the form
+const contactFormSchema = insertContactSchema.extend({
+  interest: z.string()
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -20,25 +16,38 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate the request body against our schema
       const validatedData = contactFormSchema.parse(req.body);
       
-      // In a real app, you might store this in a database or forward to an email service
-      console.log("Contact form submission:", validatedData);
+      // Extract the fields we need for database storage
+      const contactData = {
+        name: validatedData.name,
+        email: validatedData.email,
+        company: validatedData.company,
+        message: validatedData.message
+      };
+      
+      // Store in database
+      const submission = await storage.submitContactForm(contactData);
       
       // Send successful response
-      res.status(200).json({ success: true, message: "Contact form submitted successfully" });
+      res.status(200).json({ 
+        success: true, 
+        message: "Thank you! Your demo request has been submitted successfully." 
+      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         // Return validation errors
         return res.status(400).json({ 
           success: false, 
-          message: "Validation failed", 
+          message: "Please check your form entries and try again", 
           errors: error.errors 
         });
       }
       
+      console.error("Contact form error:", error);
+      
       // Server error
       res.status(500).json({ 
         success: false, 
-        message: "An error occurred processing your request" 
+        message: "An error occurred processing your request. Please try again later." 
       });
     }
   });

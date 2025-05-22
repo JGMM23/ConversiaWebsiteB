@@ -134,6 +134,18 @@ export class DatabaseStorage implements IStorage {
   async getSubscribers(): Promise<Subscriber[]> {
     return await db.select().from(subscribers);
   }
+  
+  async submitContactForm(contact: InsertContact): Promise<Contact> {
+    const [newContact] = await db
+      .insert(contacts)
+      .values(contact)
+      .returning();
+    return newContact;
+  }
+  
+  async getContactSubmissions(): Promise<Contact[]> {
+    return await db.select().from(contacts);
+  }
 }
 
 // Use the DatabaseStorage implementation since we have PostgreSQL available
