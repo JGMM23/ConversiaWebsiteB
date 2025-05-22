@@ -78,7 +78,7 @@ export default function Hero() {
             <img 
               src={healthcareTeam} 
               alt="Healthcare team collaborating" 
-              className="rounded-xl shadow-xl mx-auto w-full max-w-xl"
+              className="rounded-xl shadow-xl ml-auto w-full max-w-xl"
             />
           </motion.div>
         </div>
