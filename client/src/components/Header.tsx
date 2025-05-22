@@ -42,16 +42,26 @@ export default function Header() {
         </Link>
         
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href}
-              className="font-medium text-secondary hover:text-primary transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
+        <nav className="hidden md:flex items-center space-x-8">
+          {navLinks.map((link) => 
+            link.name === "Get a Demo" ? (
+              <a 
+                key={link.name}
+                href={link.href}
+                className="bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-2 px-4 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <a 
+                key={link.name}
+                href={link.href}
+                className="font-medium text-secondary hover:text-primary transition-colors"
+              >
+                {link.name}
+              </a>
+            )
+          )}
         </nav>
         
         {/* Mobile Menu Button */}
@@ -67,16 +77,27 @@ export default function Header() {
       {/* Mobile Menu */}
       <div className={`md:hidden bg-white px-4 py-4 shadow-md ${isOpen ? 'block' : 'hidden'}`}>
         <nav className="flex flex-col space-y-4">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href}
-              className="font-medium text-secondary hover:text-primary transition-colors"
-              onClick={closeMenu}
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) => 
+            link.name === "Get a Demo" ? (
+              <a 
+                key={link.name}
+                href={link.href}
+                className="bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-2 px-4 rounded-lg text-center transition-all shadow-md"
+                onClick={closeMenu}
+              >
+                {link.name}
+              </a>
+            ) : (
+              <a 
+                key={link.name}
+                href={link.href}
+                className="font-medium text-secondary hover:text-primary transition-colors"
+                onClick={closeMenu}
+              >
+                {link.name}
+              </a>
+            )
+          )}
         </nav>
       </div>
     </header>
