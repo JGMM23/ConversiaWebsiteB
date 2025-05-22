@@ -59,7 +59,7 @@ export default function About() {
 
         {/* Our Team section */}
         <div className="max-w-5xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold mb-12 text-primary text-center">Leadership Team</h2>
+          <h2 className="text-3xl font-bold mb-12 text-primary text-center">Founder and CEO</h2>
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/3">
               <div className="h-64 w-64 bg-accent rounded-xl mx-auto mb-6 overflow-hidden shadow-lg">
@@ -72,7 +72,6 @@ export default function About() {
             </div>
             <div className="md:w-2/3">
               <h3 className="text-2xl font-bold text-primary">Jose Molina</h3>
-              <p className="text-highlight font-medium mb-4">Founder & CEO</p>
               <div className="space-y-4 text-muted">
                 <p>
                   Jose Molina is a seasoned product and marketing leader with extensive experience helping organizations leverage cutting-edge technologies to drive sales growth, innovation, and operational efficiency.
