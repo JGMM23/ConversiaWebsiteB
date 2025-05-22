@@ -17,7 +17,6 @@ const formSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address." }),
   interest: z.string().min(1, { message: "Please select an interest." }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-  consent: z.boolean().refine((val) => val === true, { message: "You must agree to receive communications." }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -33,7 +32,6 @@ export default function Contact() {
       email: "",
       interest: "",
       message: "",
-      consent: false,
     },
   });
 
@@ -43,15 +41,15 @@ export default function Contact() {
     },
     onSuccess: () => {
       toast({
-        title: "Application submitted!",
-        description: "Thank you for your interest in our VIP program. We'll contact you soon to schedule a consultation.",
+        title: "Demo Request Submitted!",
+        description: "Thank you for your interest in Conversia AI. We'll be in touch soon to schedule your personalized demo.",
       });
       form.reset();
     },
     onError: () => {
       toast({
-        title: "Something went wrong",
-        description: "Your application couldn't be sent. Please try again later.",
+        title: "Submission Error",
+        description: "We couldn't process your request at this time. Please try again or email us directly at sales@conversia-ai.io",
         variant: "destructive",
       });
     },
