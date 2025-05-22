@@ -72,15 +72,12 @@ export default function About() {
               </ul>
             </div>
             <div className="md:w-1/2 animate-fade-in" style={{ opacity: 0 }}>
-              <div className="bg-accent p-10 rounded-xl text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Practice Simulations</h3>
-                <p className="text-gray-100 mb-6">
-                  Our AI creates realistic conversation training scenarios specific to healthcare technology sales interactions.
-                </p>
-                <div className="bg-white/10 p-6 rounded-lg">
-                  <i className="ri-customer-service-2-line text-white text-6xl mb-3"></i>
-                  <p className="text-white text-lg font-medium">Realistic healthcare tech conversation practice with feedback</p>
-                </div>
+              <div className="overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src="https://cdn.pixabay.com/photo/2019/03/25/08/52/doctor-4079957_1280.jpg" 
+                  alt="Healthcare professional learning medical devices" 
+                  className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </div>
           </div>
