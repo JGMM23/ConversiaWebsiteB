@@ -98,7 +98,7 @@ export default function About() {
           <h2 className="text-2xl font-bold mb-4">Ready to transform your team's capabilities?</h2>
           <a 
             href="/#contact" 
-            className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-8 rounded-lg transition-colors"
+            className="inline-block bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-8 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
           >
             Get a demo
           </a>

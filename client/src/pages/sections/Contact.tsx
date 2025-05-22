@@ -188,7 +188,7 @@ export default function Contact() {
                 <Button 
                   type="submit" 
                   disabled={mutation.isPending} 
-                  className="w-full bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 disabled:opacity-70 disabled:transform-none disabled:shadow-none"
                 >
                   {mutation.isPending ? "Submitting..." : "Request Demo"}
                 </Button>
