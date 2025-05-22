@@ -71,18 +71,11 @@ export default function About() {
                 </li>
               </ul>
             </div>
-            <div className="md:w-1/2 animate-fade-in space-y-6" style={{ opacity: 0 }}>
-              <div className="overflow-hidden rounded-xl shadow-lg mb-6 max-h-[280px]">
+            <div className="md:w-1/2 animate-fade-in" style={{ opacity: 0 }}>
+              <div className="overflow-hidden rounded-xl shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-                  alt="Healthcare technology team discussing strategy" 
-                  className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="overflow-hidden rounded-xl shadow-lg max-h-[280px]">
-                <img 
-                  src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-                  alt="Healthcare professional learning medical devices in training" 
+                  src="/training-image.png" 
+                  alt="Healthcare professional juggling medical devices in training session" 
                   className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
                 />
               </div>
