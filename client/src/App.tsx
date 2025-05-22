@@ -4,6 +4,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
+import GetDemo from "@/pages/GetDemo";
 import NotFound from "@/pages/not-found";
 import { MobileMenuProvider } from "@/context/MobileMenuContext";
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={BlogPost} />
+          <Route path="/get-demo" component={GetDemo} />
           <Route component={NotFound} />
         </Switch>
       </Layout>

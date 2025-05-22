@@ -36,7 +36,7 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a 
-                href="#contact" 
+                href="/get-demo" 
                 className="inline-block bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -44,7 +44,7 @@ export default function Hero() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.3 }}
               >
-                Get a demo
+                Get a Demo
               </motion.a>
               <motion.a 
                 href="#solutions" 
