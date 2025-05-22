@@ -17,8 +17,8 @@ export default function Contact() {
             <div className="space-y-4 max-w-lg">
               <div className="flex items-center justify-center space-x-2">
                 <span className="text-primary font-semibold">Email:</span>
-                <a href="mailto:contact@conversia.ai" className="text-muted hover:text-primary transition-colors">
-                  contact@conversia.ai
+                <a href="mailto:sales@conversia-ai.io" className="text-muted hover:text-primary transition-colors">
+                  sales@conversia-ai.io
                 </a>
               </div>
               <div className="flex items-center justify-center space-x-2">
