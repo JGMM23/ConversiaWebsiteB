@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { z } from "zod";
 import { insertSubscriberSchema, insertContactSchema } from "@shared/schema";
+import { createHubSpotClient, type DemoFormData } from "./hubspot";
 
 // Extend our insertContactSchema to include any additional fields needed for the form
 const contactFormSchema = insertContactSchema.extend({
@@ -27,10 +28,33 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Store in database
       const submission = await storage.submitContactForm(contactData);
       
+      // Try to send to HubSpot if configured
+      const hubspotClient = createHubSpotClient();
+      let hubspotResult = null;
+      
+      if (hubspotClient) {
+        try {
+          const demoFormData: DemoFormData = {
+            name: validatedData.name,
+            email: validatedData.email,
+            company: validatedData.company,
+            interest: validatedData.interest,
+            message: validatedData.message
+          };
+          
+          hubspotResult = await hubspotClient.processDemoRequest(demoFormData);
+          console.log(`HubSpot integration successful: Contact ${hubspotResult.contactId}, Ticket ${hubspotResult.ticketId}`);
+        } catch (hubspotError) {
+          console.error("HubSpot integration failed:", hubspotError);
+          // Continue with success response even if HubSpot fails
+        }
+      }
+      
       // Send successful response
       res.status(200).json({ 
         success: true, 
-        message: "Thank you! Your demo request has been submitted successfully." 
+        message: "Thank you! Your demo request has been submitted successfully.",
+        hubspotIntegrated: !!hubspotResult
       });
     } catch (error) {
       if (error instanceof z.ZodError) {

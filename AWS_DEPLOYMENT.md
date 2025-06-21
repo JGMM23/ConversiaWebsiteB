@@ -37,6 +37,7 @@ Amplify will auto-detect your build settings from `amplify.yml`. Verify these se
 In Amplify console, add these environment variables:
 - `DATABASE_URL`: Your PostgreSQL connection string
 - `NODE_ENV`: `production`
+- `HUBSPOT_API_KEY`: Your HubSpot private app API key (optional)
 - Any other secrets from your Replit environment
 
 ## Step 5: Database Setup
