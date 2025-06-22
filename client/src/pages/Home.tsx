@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import Hero from "@/pages/sections/Hero";
 import About from "@/pages/sections/About";
-import Solutions from "@/pages/sections/Solutions";
-import UseCases from "@/pages/sections/UseCases";
-import Contact from "@/pages/sections/Contact";
+import ServiceOfferings from "@/pages/sections/ServiceOfferings";
+import HealthcareSolutions from "@/pages/sections/HealthcareSolutions";
+import CompanyInfo from "@/pages/sections/CompanyInfo";
 
 export default function Home() {
   // Set up intersection observer for animations
@@ -39,9 +39,9 @@ export default function Home() {
     <>
       <Hero />
       <About />
-      <Solutions />
-      <UseCases />
-      <Contact />
+      <ServiceOfferings />
+      <HealthcareSolutions />
+      <CompanyInfo />
     </>
   );
 }
