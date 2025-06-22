@@ -29,10 +29,10 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               Elevate Sales Performance with AI-Powered Coaching
             </h1>
-            <p className="text-lg md:text-xl text-muted mb-8 max-w-lg">
+            <p className="text-large text-neutral-600 max-w-lg">
               Conversia AI helps healthcare technology teams prepare for high-stakes customer conversations with AI-powered coaching that drives results.
             </p>
 
