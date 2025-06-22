@@ -6,7 +6,7 @@ export default function CompanyInfo() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact Us</h2>
-          <p className="text-lg text-muted mb-10">
+          <p className="text-large text-neutral-700 mb-10">
             Have questions about Conversia AI? We're here to help your healthcare technology team improve performance with AI-powered coaching.
           </p>
           
@@ -17,13 +17,13 @@ export default function CompanyInfo() {
             <div className="space-y-4 max-w-lg">
               <div className="flex items-center justify-center space-x-2">
                 <span className="text-primary font-semibold">Email:</span>
-                <a href="mailto:sales@conversia-ai.io" className="text-muted hover:text-primary transition-colors">
+                <a href="mailto:sales@conversia-ai.io" className="text-neutral-700 hover:text-primary transition-colors">
                   sales@conversia-ai.io
                 </a>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <span className="text-primary font-semibold">Headquarters:</span>
-                <span className="text-muted">Lexington, MA</span>
+                <span className="text-neutral-700">Lexington, MA</span>
               </div>
             </div>
             

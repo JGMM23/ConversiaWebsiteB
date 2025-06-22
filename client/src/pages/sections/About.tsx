@@ -51,23 +51,23 @@ export default function About() {
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
-                  <span className="text-muted">Long onboarding and ramp when launching products and campaigns</span>
+                  <span className="text-neutral-700">Long onboarding and ramp when launching products and campaigns</span>
                 </li>
                 <li className="flex items-start">
                   <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
-                  <span className="text-muted">Manager bandwidth limits coaching opportunities</span>
+                  <span className="text-neutral-700">Manager bandwidth limits coaching opportunities</span>
                 </li>
                 <li className="flex items-start">
                   <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
-                  <span className="text-muted">Inconsistent rep preparation and performance</span>
+                  <span className="text-neutral-700">Inconsistent rep preparation and performance</span>
                 </li>
                 <li className="flex items-start">
                   <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
-                  <span className="text-muted">Poor visibility into training effectiveness and ROI</span>
+                  <span className="text-neutral-700">Poor visibility into training effectiveness and ROI</span>
                 </li>
                 <li className="flex items-start">
                   <i className="ri-close-circle-line text-red-500 text-xl mt-0.5 mr-2"></i>
-                  <span className="text-muted">Lack of real-world practice opportunities</span>
+                  <span className="text-neutral-700">Lack of real-world practice opportunities</span>
                 </li>
               </ul>
             </div>
