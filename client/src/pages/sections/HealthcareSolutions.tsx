@@ -131,7 +131,7 @@ export default function HealthcareSolutions() {
               <div className="flex items-center justify-center mb-4">
                 <div className="text-[#E94F3D] text-4xl font-bold">78%</div>
               </div>
-              <p className="text-center text-muted">
+              <p className="text-center text-neutral-700">
                 of organizations now use AI in at least one business function
               </p>
             </div>
@@ -140,7 +140,7 @@ export default function HealthcareSolutions() {
               <div className="flex items-center justify-center mb-4">
                 <div className="text-[#72A84D] text-4xl font-bold">66%</div>
               </div>
-              <p className="text-center text-muted">
+              <p className="text-center text-neutral-700">
                 of companies using gen AI in marketing and sales report revenue increases
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function HealthcareSolutions() {
               <div className="flex items-center justify-center mb-4">
                 <div className="text-[#005DA5] text-4xl font-bold">92%</div>
               </div>
-              <p className="text-center text-muted">
+              <p className="text-center text-neutral-700">
                 of early adopters reported their GenAI initiatives were already paying for themselves
               </p>
             </div>
@@ -159,7 +159,7 @@ export default function HealthcareSolutions() {
             <a href="/get-demo" className="inline-block bg-highlight hover:bg-highlight/90 text-white font-medium py-3 px-8 rounded-lg transition-colors mb-4">
               Get a Demo
             </a>
-            <p className="text-sm text-gray-500 text-center">
+            <p className="text-sm text-neutral-600 text-center">
               Sources: McKinsey The State of AI March 2025 and Survey of 1900 companies conducted by Snowflake 2025
             </p>
           </div>
