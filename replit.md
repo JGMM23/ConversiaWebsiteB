@@ -115,10 +115,8 @@ Currently implemented schemas:
 ### Backend Dependencies
 
 - Express.js for the server
-- Drizzle ORM for database operations
 - Zod for validation
-- Connect-pg-simple (for sessions)
-- Neon Serverless PostgreSQL client
+- HubSpot API integration for lead management
 
 ## Deployment Strategy
 
@@ -132,13 +130,13 @@ The application is configured for deployment on Replit with:
    - Production: Node.js server serving pre-built static assets
    - Development: Vite dev server with hot module replacement
 
-3. **Database**:
-   - Configured to use PostgreSQL via Drizzle ORM
-   - Migrations handled through Drizzle Kit
+3. **External Services**:
+   - HubSpot API integration for lead management
+   - No local database required
 
 4. **Environment Setup**:
-   - Uses Replit's built-in PostgreSQL module
    - Configured to run on port 5000 during development
    - Mapped to port 80 for public access
+   - Environment variables for HubSpot API key
 
-The deployment follows a standard pattern where the frontend is built as static assets and served by the Express backend, which also provides the API endpoints.
+The deployment follows a simplified pattern where the frontend is built as static assets and served by the Express backend, which provides API endpoints that integrate with external services.
