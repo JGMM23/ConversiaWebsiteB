@@ -68,17 +68,17 @@ export default function ServiceOfferings() {
             </ul>
           </div>
           
-          <div className="card card-hover animate-fade-in" style={{ opacity: 0, animationDelay: "0.3s" }}>
+          <div className="bg-white rounded-xl p-8 shadow-sm animate-fade-in" style={{ opacity: 0, animationDelay: "0.3s" }}>
             <div className="flex justify-between items-start mb-6">
               <div>
-                <h3 className="text-2xl font-semibold">Pre-Call Plan</h3>
-                <p className="text-neutral-600">AI coaching for customer-specific preparation</p>
+                <h3 className="text-2xl font-semibold mb-2">Pre-Call Plan</h3>
+                <p className="text-muted">AI coaching for customer-specific preparation</p>
               </div>
               <span className="text-3xl text-primary">
                 <i className="ri-calendar-check-line"></i>
               </span>
             </div>
-            <p className="text-neutral-600 mb-6">
+            <p className="text-muted mb-6">
               Provide a few pieces of information and get customer-specific guidance before your meetings, including preparation for likely objections.
             </p>
             <ul className="space-y-3">
