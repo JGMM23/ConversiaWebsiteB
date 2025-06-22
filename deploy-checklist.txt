@@ -1,23 +1,31 @@
-CONVERSIA AI - AWS DEPLOYMENT CHECKLIST
+CONVERSIA AI - AWS S3 + CLOUDFRONT DEPLOYMENT CHECKLIST
 
 PREREQUISITES:
 □ AWS Account created
+□ AWS CLI installed and configured
 □ GitHub repository ready
 □ GoDaddy domain purchased
 □ HubSpot API key available
 
-DEPLOYMENT STEPS:
-□ 1. Push code to GitHub main branch
-□ 2. Create AWS Amplify app
-□ 3. Connect GitHub repository
-□ 4. Configure build settings (auto-detected from amplify.yml)
-□ 5. Add environment variables:
-    □ HUBSPOT_API_KEY
-    □ NODE_ENV=production
-□ 6. Deploy application
-□ 7. Add custom domain in Amplify
-□ 8. Update DNS records in GoDaddy
-□ 9. Wait for SSL certificate provisioning
+AWS INFRASTRUCTURE SETUP:
+□ 1. Create S3 bucket (us-east-1)
+□ 2. Enable static website hosting
+□ 3. Configure bucket policy for public access
+□ 4. Create CloudFront distribution
+□ 5. Configure Origin Access Control (OAC)
+□ 6. Set up error pages (404 → index.html)
+□ 7. Request SSL certificate in Certificate Manager
+□ 8. Create Route 53 hosted zone
+□ 9. Update GoDaddy name servers to Route 53
+□ 10. Create DNS records in Route 53
+
+GITHUB ACTIONS SETUP:
+□ 1. Add GitHub secrets:
+    □ AWS_ACCESS_KEY_ID
+    □ AWS_SECRET_ACCESS_KEY
+    □ S3_BUCKET_NAME
+    □ CLOUDFRONT_DISTRIBUTION_ID
+□ 2. Push code to trigger deployment
 
 POST-DEPLOYMENT VERIFICATION:
 □ Homepage loads correctly

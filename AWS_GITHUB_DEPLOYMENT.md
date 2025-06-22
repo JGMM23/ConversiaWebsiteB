@@ -1,15 +1,15 @@
-# AWS Deployment Guide with GitHub Integration
+# AWS Deployment Guide: S3 + CloudFront + Route 53
 
-This guide will help you deploy your Conversia AI website to AWS using GitHub integration and connect your GoDaddy domain.
+This guide will help you deploy your Conversia AI website using AWS S3 for hosting, CloudFront for CDN, and Route 53 for DNS management with your GoDaddy domain.
 
-## Overview
+## Architecture Overview
 
-We'll use AWS Amplify for hosting, which provides:
-- Automatic deployments from GitHub
-- Built-in CI/CD pipeline
-- SSL certificates
-- Custom domain support
-- CDN (CloudFront) integration
+We'll use:
+- **S3**: Static website hosting
+- **CloudFront**: Global CDN for fast content delivery
+- **Route 53**: DNS management and domain routing
+- **Certificate Manager**: SSL certificates
+- **GitHub Actions**: Automated deployment pipeline
 
 ## Prerequisites
 
@@ -26,85 +26,84 @@ Your current project structure is ready for deployment. Key files:
 - `server/index.ts` - Express server
 - Built-in HubSpot integration
 
-## Step 2: Set Up AWS Amplify
+## Step 2: Set Up S3 Bucket
 
-### 2.1 Create Amplify App
+### 2.1 Create S3 Bucket
+1. Go to AWS Console → S3
+2. Click "Create bucket"
+3. Bucket name: `conversia-ai-website` (must be globally unique)
+4. Region: `us-east-1` (required for CloudFront)
+5. Uncheck "Block all public access"
+6. Enable "Static website hosting"
+7. Index document: `index.html`
+8. Error document: `index.html` (for SPA routing)
 
-1. Go to AWS Console → Amplify
-2. Click "New app" → "Host web app"
-3. Choose "GitHub" as source
-4. Connect your GitHub account
-5. Select your repository and branch (main/master)
+### 2.2 Configure Bucket Policy
+Add this bucket policy (replace `conversia-ai-website` with your bucket name):
 
-### 2.2 Configure Build Settings
-
-Use these build settings in Amplify:
-
-```yaml
-version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - npm ci
-    build:
-      commands:
-        - npm run build
-  artifacts:
-    baseDirectory: dist
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
-backend:
-  phases:
-    preBuild:
-      commands:
-        - npm ci
-    build:
-      commands:
-        - npm run build:server
-  artifacts:
-    baseDirectory: dist-server
-    files:
-      - '**/*'
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::conversia-ai-website/*"
+        }
+    ]
+}
 ```
 
-## Step 3: Environment Variables
+## Step 3: Set Up CloudFront Distribution
 
-Set these environment variables in Amplify Console:
+### 3.1 Create Distribution
+1. Go to AWS Console → CloudFront
+2. Click "Create distribution"
+3. Origin domain: Select your S3 bucket
+4. Origin access: Use OAC (Origin Access Control)
+5. Default root object: `index.html`
+6. Error pages: Add custom error response
+   - HTTP Error Code: 404
+   - Response page path: `/index.html`
+   - HTTP Response Code: 200
 
-1. Go to App Settings → Environment variables
-2. Add:
-   - `HUBSPOT_API_KEY` = (your HubSpot API key)
-   - `NODE_ENV` = production
+### 3.2 Configure Caching
+- Caching behavior: Caching optimized for S3
+- Cache policy: Managed-CachingOptimized
+- Compress objects automatically: Yes
 
-## Step 4: Custom Domain Setup (GoDaddy)
+## Step 4: Request SSL Certificate
 
-### 4.1 Add Domain in Amplify
+### 4.1 AWS Certificate Manager
+1. Go to AWS Console → Certificate Manager
+2. Request public certificate
+3. Domain names: 
+   - `yourdomain.com`
+   - `www.yourdomain.com`
+4. Validation: DNS validation
+5. Add CNAME records to GoDaddy DNS (provided by AWS)
 
-1. In Amplify Console → Domain management
-2. Click "Add domain"
-3. Enter your GoDaddy domain (e.g., conversia-ai.com)
-4. Choose to redirect www to root domain (recommended)
+## Step 5: Set Up Route 53
 
-### 4.2 Update DNS in GoDaddy
+### 5.1 Create Hosted Zone
+1. Go to AWS Console → Route 53
+2. Create hosted zone for your domain
+3. Note the 4 name servers provided
 
-1. Log into GoDaddy DNS Management
-2. Add these records (provided by Amplify):
+### 5.2 Update GoDaddy Name Servers
+1. Log into GoDaddy domain management
+2. Change name servers to Route 53 values:
+   - `ns-xxx.awsdns-xx.com`
+   - `ns-xxx.awsdns-xx.co.uk` 
+   - `ns-xxx.awsdns-xx.net`
+   - `ns-xxx.awsdns-xx.org`
 
-```
-Type: CNAME
-Name: www
-Value: [amplify-provided-url]
-
-Type: A
-Name: @
-Value: [amplify-provided-ip]
-```
-
-Note: Amplify will provide specific values during domain setup
+### 5.3 Create DNS Records
+In Route 53, create:
+- A record: `@` → CloudFront distribution
+- CNAME record: `www` → CloudFront distribution
 
 ## Step 5: SSL Certificate
 
@@ -112,12 +111,19 @@ Amplify automatically provisions SSL certificates for custom domains.
 - Certificate validation happens automatically
 - HTTPS redirect is enabled by default
 
-## Step 6: Continuous Deployment
+## Step 6: GitHub Actions Deployment
 
-Once connected to GitHub:
-- Every push to main branch triggers automatic deployment
-- Build logs available in Amplify Console
-- Rollback capability available
+GitHub Actions will automatically:
+- Build the website on push to main branch
+- Deploy to S3 bucket
+- Invalidate CloudFront cache
+- Provide deployment status
+
+Environment variables needed in GitHub Secrets:
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `S3_BUCKET_NAME`
+- `CLOUDFRONT_DISTRIBUTION_ID`
 
 ## Step 7: Performance Optimizations
 
@@ -151,13 +157,13 @@ Your Vite build already includes:
 
 ## Cost Estimation
 
-AWS Amplify pricing (approximate):
-- Build minutes: $0.01 per minute
-- Data transfer: $0.15/GB
-- Storage: $0.023/GB per month
-- Custom domain: No additional cost
+S3 + CloudFront + Route 53 pricing (approximate):
+- S3 storage: $0.023/GB per month
+- CloudFront data transfer: $0.085/GB (first 10TB)
+- Route 53 hosted zone: $0.50/month
+- Certificate Manager: Free
 
-Expected monthly cost for small-medium traffic: $5-20
+Expected monthly cost for small-medium traffic: $2-10
 
 ## Security Best Practices
 
