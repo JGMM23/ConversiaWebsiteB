@@ -13,7 +13,7 @@ export default function Testimonials() {
                 <i className="ri-double-quotes-l"></i>
               </div>
             </div>
-            <p className="text-muted mb-6 italic">
+            <p className="text-neutral-700 mb-6 italic">
               "Conversia AI has transformed how our sales teams prepare for high-stakes provider conversations. The role-play simulations have significantly improved our reps' confidence and effectiveness."
             </p>
             <div className="flex items-center">
@@ -22,7 +22,7 @@ export default function Testimonials() {
               </div>
               <div>
                 <p className="font-semibold">David Rodriguez</p>
-                <p className="text-sm text-muted">VP of Sales, Medical Devices Company</p>
+                <p className="text-sm text-neutral-600">VP of Sales, Medical Devices Company</p>
               </div>
             </div>
           </div>
@@ -33,7 +33,7 @@ export default function Testimonials() {
                 <i className="ri-double-quotes-l"></i>
               </div>
             </div>
-            <p className="text-muted mb-6 italic">
+            <p className="text-neutral-700 mb-6 italic">
               "The speed of implementation and quality we get with Conversia AI is unmatched. We've cut our training costs by 35% while improving our conversion rates and customer satisfaction scores."
             </p>
             <div className="flex items-center">
@@ -42,7 +42,7 @@ export default function Testimonials() {
               </div>
               <div>
                 <p className="font-semibold">Sarah Johnson</p>
-                <p className="text-sm text-muted">Director of Commercial Excellence, Healthcare Technology</p>
+                <p className="text-sm text-neutral-600">Director of Commercial Excellence, Healthcare Technology</p>
               </div>
             </div>
           </div>
@@ -58,10 +58,10 @@ export default function Testimonials() {
               </div>
               <div className="md:w-3/4 md:pl-8">
                 <h3 className="text-xl font-semibold mb-3">About Our Founder and CEO</h3>
-                <p className="text-muted mb-4">
+                <p className="text-neutral-700 mb-4">
                   Jose Molina is a seasoned product and marketing leader with extensive experience helping healthcare organizations leverage cutting-edge technologies to drive sales growth and operational efficiency.
                 </p>
-                <p className="text-muted">
+                <p className="text-neutral-700">
                   With leadership roles at Johnson & Johnson, Fresenius (NxStage), Medtronic, and GE Healthcare, Jose has launched 15+ innovative products and recently pioneered a GenAI solution at J&J that revolutionized field enablement.
                 </p>
               </div>

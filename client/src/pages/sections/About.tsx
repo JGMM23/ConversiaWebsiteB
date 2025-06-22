@@ -35,7 +35,7 @@ export default function About() {
               <i className="ri-bubble-chart-fill"></i>
             </div>
             <h3 className="text-xl font-semibold mb-3">Complex Discussions</h3>
-            <p className="text-muted">
+            <p className="text-neutral-700">
               Effective healthcare tech conversations require blending technology, science, clinical knowledge, regulatory concerns, and business insights.
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function About() {
           <div className="flex flex-col md:flex-row md:items-center">
             <div className="md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Traditional Sales Readiness Struggles</h2>
-              <p className="text-lg text-muted mb-6">
+              <p className="text-large text-neutral-700 mb-6">
                 Healthcare technology teams need better preparation for critical customer conversations than traditional training methods can provide.
               </p>
               <ul className="space-y-4">
