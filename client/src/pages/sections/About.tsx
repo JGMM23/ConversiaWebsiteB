@@ -4,7 +4,7 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">In Healthcare Tech, Every Conversation Counts</h2>
-          <p className="text-lg text-muted">
+          <p className="text-large text-neutral-700">
             Customer conversations in healthcare technology are high-stakes and directly influence critical patient care decisions. Success requires earning trust from highly knowledgeable experts.
           </p>
         </div>
@@ -15,7 +15,7 @@ export default function About() {
               <i className="ri-heart-pulse-fill"></i>
             </div>
             <h3 className="text-xl font-semibold mb-3">High-Stakes Conversations</h3>
-            <p className="text-muted">
+            <p className="text-neutral-700">
               Healthcare tech conversations directly influence patient care decisions and require both clinical and technical expertise to navigate effectively.
             </p>
           </div>
@@ -25,7 +25,7 @@ export default function About() {
               <i className="ri-time-fill"></i>
             </div>
             <h3 className="text-xl font-semibold mb-3">Limited Provider Time</h3>
-            <p className="text-muted">
+            <p className="text-neutral-700">
               Healthcare providers are busier than ever, with minimal time for education and interactions with industry representatives.
             </p>
           </div>

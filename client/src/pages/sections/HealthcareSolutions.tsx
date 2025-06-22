@@ -43,7 +43,7 @@ export default function HealthcareSolutions() {
                 </div>
                 <h3 className="text-xl font-bold">Lower Training Costs</h3>
               </div>
-              <p className="text-muted mb-4">
+              <p className="text-neutral-700 mb-4">
                 Reduce the number of training hours needed while improving effectiveness, allowing your teams to spend more time with customers.
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function HealthcareSolutions() {
                 </div>
                 <h3 className="text-xl font-bold">Greater Consistency</h3>
               </div>
-              <p className="text-muted mb-4">
+              <p className="text-neutral-700 mb-4">
                 Ensure all team members stay compliant and on-message with consistent AI guidance based on your approved content and strategies.
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function HealthcareSolutions() {
                 <i className="ri-brain-line text-white text-5xl"></i>
               </div>
               <h4 className="text-xl font-semibold text-center mb-3">Customized GenAI</h4>
-              <p className="text-muted text-center">
+              <p className="text-neutral-700 text-center">
                 Trained on your data, workflows and tactics to provide personalized coaching
               </p>
             </div>
@@ -85,7 +85,7 @@ export default function HealthcareSolutions() {
                 <i className="ri-shield-keyhole-line text-white text-5xl"></i>
               </div>
               <h4 className="text-xl font-semibold text-center mb-3">Enterprise-grade Security</h4>
-              <p className="text-muted text-center">
+              <p className="text-neutral-700 text-center">
                 Privacy & security built-in, compliant as an internal tool
               </p>
             </div>
@@ -95,7 +95,7 @@ export default function HealthcareSolutions() {
                 <i className="ri-team-line text-white text-5xl"></i>
               </div>
               <h4 className="text-xl font-semibold text-center mb-3">Consistent Experience</h4>
-              <p className="text-muted text-center">
+              <p className="text-neutral-700 text-center">
                 Across teams with LLMs agnostic approach - the right model for each use case
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function HealthcareSolutions() {
                 <i className="ri-rocket-line text-white text-5xl"></i>
               </div>
               <h4 className="text-xl font-semibold text-center mb-3">Rapid Deployment</h4>
-              <p className="text-muted text-center">
+              <p className="text-neutral-700 text-center">
                 Deployed in days with no IT lift and white glove implementation & support
               </p>
             </div>
