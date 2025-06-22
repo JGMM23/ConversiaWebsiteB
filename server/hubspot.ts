@@ -17,7 +17,7 @@ const hubspotTicketSchema = z.object({
     hs_pipeline: z.string().default("0"), // Default pipeline
     hs_pipeline_stage: z.string().default("1"), // New ticket stage
     hs_ticket_priority: z.string().default("MEDIUM"),
-    source_type: z.string().default("WEB")
+    source_type: z.string().default("FORM")
   }),
   associations: z.array(z.object({
     to: z.object({
@@ -128,7 +128,7 @@ export class HubSpotIntegration {
         hs_pipeline: "0",
         hs_pipeline_stage: "1",
         hs_ticket_priority: "MEDIUM",
-        source_type: "WEB"
+        source_type: "FORM"
       },
       associations: contactId ? [{
         to: { id: contactId },
