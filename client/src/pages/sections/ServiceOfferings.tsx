@@ -39,17 +39,17 @@ export default function ServiceOfferings() {
             </ul>
           </div>
           
-          <div className="bg-white rounded-xl p-8 shadow-sm animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
+          <div className="card card-hover animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
             <div className="flex justify-between items-start mb-6">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">AI Role Play</h3>
-                <p className="text-muted">Realistic virtual customer simulations</p>
+                <p className="text-neutral-700">Realistic virtual customer simulations</p>
               </div>
               <span className="text-3xl text-primary">
                 <i className="ri-group-line"></i>
               </span>
             </div>
-            <p className="text-muted mb-6">
+            <p className="text-neutral-700 mb-6">
               Practice conversations with a realistic virtual partner customized to your specific scenarios and receive immediate feedback and coaching.
             </p>
             <ul className="space-y-3">
@@ -68,11 +68,11 @@ export default function ServiceOfferings() {
             </ul>
           </div>
           
-          <div className="bg-white rounded-xl p-8 shadow-sm animate-fade-in" style={{ opacity: 0, animationDelay: "0.3s" }}>
+          <div className="card card-hover animate-fade-in" style={{ opacity: 0, animationDelay: "0.3s" }}>
             <div className="flex justify-between items-start mb-6">
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Pre-Call Plan</h3>
-                <p className="text-muted">AI coaching for customer-specific preparation</p>
+                <p className="text-neutral-700">AI coaching for customer-specific preparation</p>
               </div>
               <span className="text-3xl text-primary">
                 <i className="ri-calendar-check-line"></i>
