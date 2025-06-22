@@ -6,10 +6,9 @@ const hubspotContactSchema = z.object({
     firstname: z.string(),
     lastname: z.string(),
     company: z.string(),
-    interest_area: z.string(),
-    message: z.string(),
-    lifecyclestage: z.string().default("lead"),
-    lead_source: z.string().default("website_demo_form")
+    hs_lead_status: z.string().default("NEW"),
+    notes_last_contacted: z.string().optional(),
+    lifecyclestage: z.string().default("lead")
   })
 });
 
@@ -71,16 +70,26 @@ export class HubSpotIntegration {
     const [firstName, ...lastNameParts] = formData.name.split(' ');
     const lastName = lastNameParts.join(' ') || '';
 
+    const interestMap: Record<string, string> = {
+      'vip_program': 'Early Adopter VIP Program',
+      'private_chat': 'Private Chat Solution',
+      'ai_role_play': 'AI Role Play Training',
+      'pre_call_plan': 'Pre-Call Planning Tool',
+      'all_platform': 'Complete Conversia Platform'
+    };
+
+    const interestDisplay = interestMap[formData.interest] || formData.interest;
+    const notes = `Demo Request - Interest: ${interestDisplay}\nMessage: ${formData.message}\nSource: Website Demo Form`;
+
     const contactData = hubspotContactSchema.parse({
       properties: {
         email: formData.email,
         firstname: firstName,
         lastname: lastName,
         company: formData.company,
-        interest_area: formData.interest,
-        message: formData.message,
-        lifecyclestage: "lead",
-        lead_source: "website_demo_form"
+        hs_lead_status: "NEW",
+        notes_last_contacted: notes,
+        lifecyclestage: "lead"
       }
     });
 
