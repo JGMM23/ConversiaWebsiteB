@@ -1,5 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { Link } from "wouter";
 import conversiaUI from "../../assets/conversia-ui.png";
 import healthcareTeam from "../../assets/healthcare-team.png";
 
@@ -35,17 +36,18 @@ export default function Hero() {
               Conversia AI helps healthcare technology teams prepare for high-stakes customer conversations with AI-powered coaching that drives results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <motion.a 
-                href="/get-demo" 
-                className="inline-block bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.3 }}
-              >
-                Get a Demo
-              </motion.a>
+              <Link href="/get-demo">
+                <motion.div 
+                  className="inline-block bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.3 }}
+                >
+                  Get a Demo
+                </motion.div>
+              </Link>
               <motion.a 
                 href="#solutions" 
                 className="inline-block border-2 border-[#4F2582] text-[#4F2582] hover:bg-[#4F2582]/10 font-medium py-3 px-6 rounded-lg transition-all shadow-sm hover:shadow-md transform hover:-translate-y-1"
