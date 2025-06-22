@@ -66,7 +66,7 @@ export default function Header() {
           </nav>
           <a 
             href="/login" 
-            className="bg-gradient-to-r from-[#B64621] to-[#d65a32] hover:from-[#d65a32] hover:to-[#B64621] text-white font-medium py-2 px-4 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
+            className="btn-secondary"
           >
             Log In
           </a>
@@ -90,7 +90,7 @@ export default function Header() {
               <a 
                 key={link.name}
                 href={link.href}
-                className="bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-2 px-4 rounded-lg text-center transition-all shadow-md"
+                className="btn-primary text-center"
                 onClick={closeMenu}
               >
                 {link.name}

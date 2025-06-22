@@ -3,28 +3,28 @@ export default function HealthcareSolutions() {
     <section id="use-cases" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">What Healthcare Tech Leaders Can Expect</h2>
+          <h2 className="text-4xl font-bold">What Healthcare Tech Leaders Can Expect</h2>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 mb-12">
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0 }}>
+          <div className="card card-hover animate-fade-in" style={{ opacity: 0 }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-[#E94F3D] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
+                <div className="bg-secondary text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
                   <i className="ri-rocket-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Faster Onboarding</h3>
               </div>
-              <p className="text-muted mb-4">
+              <p className="text-neutral-600 mb-4">
                 Reduce onboarding time for new team members and accelerate product launch readiness with AI-powered training and role-play simulations.
               </p>
             </div>
           </div>
           
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
+          <div className="card card-hover animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
-                <div className="bg-[#005DA5] text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
+                <div className="bg-primary text-white rounded-full p-4 mr-4 shadow-md flex items-center justify-center h-14 w-14 transform hover:scale-105 transition-transform">
                   <i className="ri-line-chart-fill text-3xl"></i>
                 </div>
                 <h3 className="text-xl font-bold">Improved Performance</h3>

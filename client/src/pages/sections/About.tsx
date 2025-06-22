@@ -3,29 +3,29 @@ export default function About() {
     <section id="about" className="section-padding bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">In Healthcare Tech, Every Conversation Counts</h2>
-          <p className="text-lg text-muted">
+          <h2 className="text-4xl font-bold">In Healthcare Tech, Every Conversation Counts</h2>
+          <p className="text-large text-neutral-600">
             Customer conversations in healthcare technology are high-stakes and directly influence critical patient care decisions. Success requires earning trust from highly knowledgeable experts.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-accent rounded-xl p-8 animate-fade-in" style={{ opacity: 0 }}>
-            <div className="text-white text-6xl mb-6 flex items-center justify-center h-20 w-20 rounded-full bg-highlight shadow-md mx-auto transform hover:scale-105 transition-transform">
+          <div className="card card-hover animate-fade-in" style={{ opacity: 0 }}>
+            <div className="text-white text-6xl mb-6 flex items-center justify-center h-20 w-20 rounded-full bg-secondary shadow-md mx-auto transform hover:scale-105 transition-transform">
               <i className="ri-heart-pulse-fill"></i>
             </div>
             <h3 className="text-xl font-semibold mb-3">High-Stakes Conversations</h3>
-            <p className="text-muted">
+            <p className="text-neutral-600">
               Healthcare tech conversations directly influence patient care decisions and require both clinical and technical expertise to navigate effectively.
             </p>
           </div>
           
-          <div className="bg-accent rounded-xl p-8 animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
+          <div className="card card-hover animate-fade-in" style={{ opacity: 0, animationDelay: "0.2s" }}>
             <div className="text-white text-6xl mb-6 flex items-center justify-center h-20 w-20 rounded-full bg-primary shadow-md mx-auto transform hover:scale-105 transition-transform">
               <i className="ri-time-fill"></i>
             </div>
             <h3 className="text-xl font-semibold mb-3">Limited Provider Time</h3>
-            <p className="text-muted">
+            <p className="text-neutral-600">
               Healthcare providers are busier than ever, with minimal time for education and interactions with industry representatives.
             </p>
           </div>
