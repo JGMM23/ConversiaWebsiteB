@@ -20,13 +20,13 @@ export default function About() {
               <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">About Conversia AI</h1>
                 <div className="space-y-6">
-                  <p className="text-lg text-muted">
+                  <p className="text-large text-neutral-700">
                     We empower commercial teams with a unified GenAI platform that accelerates performance, reduces costs, and scales excellence.
                   </p>
-                  <p className="text-lg text-muted">
+                  <p className="text-large text-neutral-700">
                     We deliver customizable, secure AI-powered applications and agents that replicate expert-level execution, streamline workflows, and institutionalize best practices.
                   </p>
-                  <p className="text-lg text-muted">
+                  <p className="text-large text-neutral-700">
                     We strive to eliminate dozens of copilots and point solutions to help you unlock competitive advantage.
                   </p>
                 </div>
@@ -72,7 +72,7 @@ export default function About() {
             </div>
             <div className="md:w-2/3">
               <h3 className="text-2xl font-bold text-primary">Jose Molina</h3>
-              <div className="space-y-4 text-muted">
+              <div className="space-y-4 text-neutral-700">
                 <p>
                   Jose Molina is a seasoned product and marketing leader with extensive experience helping organizations leverage cutting-edge technologies to drive sales growth, innovation, and operational efficiency.
                 </p>
@@ -98,7 +98,7 @@ export default function About() {
           <h2 className="text-2xl font-bold mb-4">Ready to transform your team's capabilities?</h2>
           <a 
             href="/get-demo" 
-            className="inline-block bg-gradient-to-r from-[#4F2582] to-[#6e35b5] hover:from-[#6e35b5] hover:to-[#4F2582] text-white font-medium py-3 px-8 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
+            className="btn-primary"
           >
             Get a Demo
           </a>
