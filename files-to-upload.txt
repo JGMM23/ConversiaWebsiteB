@@ -1,9 +1,0 @@
-Files ready for AWS S3 upload (from deploy-ready folder):
-
-✓ index.html - Main website file
-✓ Static assets (CSS, JS, images)
-✓ All necessary files for your Conversia AI website
-
-Upload ALL files from the 'deploy-ready' folder to your S3 bucket.
-
-Do not upload individual files - upload the entire contents of the deploy-ready folder.
