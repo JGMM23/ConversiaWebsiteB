@@ -32,7 +32,7 @@ export default function Hero() {
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               Elevate Sales Performance with AI-Powered Coaching
             </h1>
-            <p className="text-large text-neutral-600 max-w-lg">
+            <p className="text-large text-neutral-700 max-w-lg">
               Conversia AI helps healthcare technology teams prepare for high-stakes customer conversations with AI-powered coaching that drives results.
             </p>
 

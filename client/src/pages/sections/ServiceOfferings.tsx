@@ -4,7 +4,7 @@ export default function ServiceOfferings() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold">One Platform. Three Powerful AI Use Cases</h2>
-          <p className="text-large text-neutral-600">
+          <p className="text-large text-neutral-700">
             Conversia AI provides a unified platform with multiple AI-powered features designed specifically for healthcare technology commercial teams.
           </p>
         </div>
@@ -14,13 +14,13 @@ export default function ServiceOfferings() {
             <div className="flex justify-between items-start mb-6">
               <div>
                 <h3 className="text-2xl font-semibold">Private Chat</h3>
-                <p className="text-neutral-600">Instant access to company knowledge and coaching</p>
+                <p className="text-neutral-700">Instant access to company knowledge and coaching</p>
               </div>
               <span className="text-3xl text-primary">
                 <i className="ri-chat-3-line"></i>
               </span>
             </div>
-            <p className="text-neutral-600 mb-6">
+            <p className="text-neutral-700 mb-6">
               Help your teams find precise information rapidly with AI that leverages your company's documents such as IFUs, labeling, clinical evidence, and more.
             </p>
             <ul className="space-y-3">
