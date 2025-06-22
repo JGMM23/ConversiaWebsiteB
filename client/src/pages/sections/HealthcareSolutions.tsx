@@ -15,7 +15,7 @@ export default function HealthcareSolutions() {
                 </div>
                 <h3 className="text-xl font-bold">Faster Onboarding</h3>
               </div>
-              <p className="text-muted mb-4">
+              <p className="text-neutral-700 mb-4">
                 Reduce onboarding time for new team members and accelerate product launch readiness with AI-powered training and role-play simulations.
               </p>
             </div>
@@ -29,7 +29,7 @@ export default function HealthcareSolutions() {
                 </div>
                 <h3 className="text-xl font-bold">Improved Performance</h3>
               </div>
-              <p className="text-muted mb-4">
+              <p className="text-neutral-700 mb-4">
                 Enhance conversion rates, objection handling, and overall customer satisfaction with consistent AI coaching across your entire team.
               </p>
             </div>

@@ -78,7 +78,7 @@ export default function ServiceOfferings() {
                 <i className="ri-calendar-check-line"></i>
               </span>
             </div>
-            <p className="text-muted mb-6">
+            <p className="text-neutral-700 mb-6">
               Provide a few pieces of information and get customer-specific guidance before your meetings, including preparation for likely objections.
             </p>
             <ul className="space-y-3">
