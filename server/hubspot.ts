@@ -121,7 +121,8 @@ export class HubSpotIntegration {
 
     const interestDisplay = interestMap[formData.interest] || formData.interest;
     
-    const ticketData = hubspotTicketSchema.parse({
+    // Create ticket without associations first
+    const ticketData = {
       properties: {
         subject: `Demo Request: ${formData.company} - ${interestDisplay}`,
         content: `Demo request from ${formData.name} at ${formData.company}\n\nInterest: ${interestDisplay}\n\nMessage: ${formData.message}\n\nContact Email: ${formData.email}`,
@@ -129,17 +130,21 @@ export class HubSpotIntegration {
         hs_pipeline_stage: "1",
         hs_ticket_priority: "MEDIUM",
         source_type: "FORM"
-      },
-      associations: contactId ? [{
-        to: { id: contactId },
-        types: [{
-          associationCategory: "HUBSPOT_DEFINED",
-          associationTypeId: 26
-        }]
-      }] : undefined
-    });
+      }
+    };
 
     const ticket = await this.makeRequest('/crm/v3/objects/tickets', 'POST', ticketData);
+    
+    // Try to create association separately if we have a contact ID
+    if (contactId && ticket.id) {
+      try {
+        await this.makeRequest(`/crm/v3/objects/tickets/${ticket.id}/associations/contacts/${contactId}/26`, 'PUT', {});
+      } catch (associationError) {
+        console.warn('Failed to associate ticket with contact:', associationError);
+        // Continue anyway - ticket was created successfully
+      }
+    }
+    
     return ticket.id;
   }
 
