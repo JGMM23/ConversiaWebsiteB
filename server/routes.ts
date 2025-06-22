@@ -1,14 +1,16 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
 import { z } from "zod";
-import { insertSubscriberSchema, insertContactSchema } from "@shared/schema";
 import { createHubSpotClient, type DemoFormData } from "./hubspot";
 
-// Extend our insertContactSchema to include any additional fields needed for the form
-const contactFormSchema = insertContactSchema.extend({
-  phone: z.string(),
-  location: z.string()
+// Contact form schema for demo requests
+const contactFormSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  company: z.string().min(2, { message: "Company name must be at least 2 characters." }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number." }),
+  location: z.string().min(1, { message: "Please select your location." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -18,45 +20,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate the request body against our schema
       const validatedData = contactFormSchema.parse(req.body);
       
-      // Extract the fields we need for database storage
-      const contactData = {
+      // Send to HubSpot
+      const hubspotClient = createHubSpotClient();
+      
+      if (!hubspotClient) {
+        return res.status(500).json({
+          success: false,
+          message: "HubSpot integration not configured. Please contact support."
+        });
+      }
+
+      const demoFormData: DemoFormData = {
         name: validatedData.name,
         email: validatedData.email,
         company: validatedData.company,
+        phone: validatedData.phone,
+        location: validatedData.location,
         message: validatedData.message
       };
       
-      // Store in database
-      const submission = await storage.submitContactForm(contactData);
-      
-      // Try to send to HubSpot if configured
-      const hubspotClient = createHubSpotClient();
-      let hubspotResult = null;
-      
-      if (hubspotClient) {
-        try {
-          const demoFormData: DemoFormData = {
-            name: validatedData.name,
-            email: validatedData.email,
-            company: validatedData.company,
-            phone: validatedData.phone,
-            location: validatedData.location,
-            message: validatedData.message
-          };
-          
-          hubspotResult = await hubspotClient.processDemoRequest(demoFormData);
-          console.log(`HubSpot integration successful: Contact ${hubspotResult.contactId}, Ticket ${hubspotResult.ticketId}`);
-        } catch (hubspotError) {
-          console.error("HubSpot integration failed:", hubspotError);
-          // Continue with success response even if HubSpot fails
-        }
-      }
+      const hubspotResult = await hubspotClient.processDemoRequest(demoFormData);
+      console.log(`HubSpot integration successful: Contact ${hubspotResult.contactId}, Ticket ${hubspotResult.ticketId}`);
       
       // Send successful response
       res.status(200).json({ 
         success: true, 
         message: "Thank you! Your demo request has been submitted successfully.",
-        hubspotIntegrated: !!hubspotResult
+        contactId: hubspotResult.contactId,
+        ticketId: hubspotResult.ticketId
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -78,62 +69,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
   
-  // Newsletter subscription endpoint
-  app.post("/api/subscribe", async (req, res) => {
-    try {
-      // Validate the email
-      const { email } = insertSubscriberSchema.parse(req.body);
-      
-      // Store in database
-      const success = await storage.addSubscriber(email);
-      
-      if (success) {
-        // Email was added
-        res.status(200).json({ 
-          success: true, 
-          message: "Subscribed successfully! Thank you for joining our newsletter." 
-        });
-      } else {
-        // Email already exists
-        res.status(409).json({ 
-          success: false, 
-          message: "This email is already subscribed to our newsletter." 
-        });
-      }
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        // Return validation errors
-        return res.status(400).json({ 
-          success: false, 
-          message: "Please enter a valid email address", 
-          errors: error.errors 
-        });
-      }
-      
-      // Server error
-      res.status(500).json({ 
-        success: false, 
-        message: "An error occurred processing your subscription. Please try again later." 
-      });
-    }
-  });
-  
-  // List subscribers endpoint (typically would be protected but added for demonstration)
-  app.get("/api/subscribers", async (req, res) => {
-    try {
-      const subscribers = await storage.getSubscribers();
-      res.status(200).json({ 
-        success: true, 
-        count: subscribers.length,
-        subscribers 
-      });
-    } catch (error) {
-      res.status(500).json({ 
-        success: false, 
-        message: "An error occurred retrieving subscribers" 
-      });
-    }
-  });
+
 
   const httpServer = createServer(app);
   return httpServer;

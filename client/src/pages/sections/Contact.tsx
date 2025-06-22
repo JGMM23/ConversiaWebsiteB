@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 
-export default function Contact() {
+export default function CompanyInfo() {
   return (
     <section id="contact" className="section-padding bg-gray-50">
       <div className="container mx-auto px-4">

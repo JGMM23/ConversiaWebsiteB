@@ -1,4 +1,4 @@
-export default function UseCases() {
+export default function HealthcareSolutions() {
   return (
     <section id="use-cases" className="section-padding bg-white">
       <div className="container mx-auto px-4">

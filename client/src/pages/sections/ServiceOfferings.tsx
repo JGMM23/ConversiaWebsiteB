@@ -1,4 +1,4 @@
-export default function Solutions() {
+export default function ServiceOfferings() {
   return (
     <section id="solutions" className="section-padding bg-accent">
       <div className="container mx-auto px-4">
