@@ -1,0 +1,48 @@
+CONVERSIA AI - AWS DEPLOYMENT CHECKLIST
+
+PREREQUISITES:
+□ AWS Account created
+□ GitHub repository ready
+□ GoDaddy domain purchased
+□ HubSpot API key available
+
+DEPLOYMENT STEPS:
+□ 1. Push code to GitHub main branch
+□ 2. Create AWS Amplify app
+□ 3. Connect GitHub repository
+□ 4. Configure build settings (auto-detected from amplify.yml)
+□ 5. Add environment variables:
+    □ HUBSPOT_API_KEY
+    □ NODE_ENV=production
+□ 6. Deploy application
+□ 7. Add custom domain in Amplify
+□ 8. Update DNS records in GoDaddy
+□ 9. Wait for SSL certificate provisioning
+
+POST-DEPLOYMENT VERIFICATION:
+□ Homepage loads correctly
+□ All navigation links work
+□ Contact form submits to HubSpot
+□ Login button opens external app
+□ Mobile responsive design
+□ SSL certificate active (https://)
+□ Page load speed acceptable
+
+DOMAIN CONFIGURATION:
+□ A record: @ → [AWS IP]
+□ CNAME record: www → [AWS domain]
+□ DNS propagation complete
+□ SSL certificate verified
+
+MONITORING SETUP:
+□ CloudWatch alarms configured
+□ Error tracking enabled
+□ Performance monitoring active
+□ Backup strategy documented
+
+FILES CREATED FOR DEPLOYMENT:
+✓ amplify.yml - Build configuration
+✓ AWS_GITHUB_DEPLOYMENT.md - Detailed guide
+✓ DEPLOYMENT_STEPS.md - Quick steps
+✓ .github/workflows/deploy.yml - CI/CD pipeline
+✓ scripts/deploy-setup.sh - Setup script

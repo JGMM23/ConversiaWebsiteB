@@ -1,27 +1,22 @@
 version: 1
-applications:
-  - backend:
-      phases:
-        build:
-          commands:
-            - npm ci
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - npm ci
-        build:
-          commands:
-            - npm run build
-      artifacts:
-        baseDirectory: dist
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+        - npm run build:server
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+backend:
+  phases:
+    build:
+      commands:
+        - echo "Backend artifacts prepared"
