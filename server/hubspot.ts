@@ -6,8 +6,6 @@ const hubspotContactSchema = z.object({
     firstname: z.string(),
     lastname: z.string(),
     company: z.string(),
-    hs_lead_status: z.string().default("NEW"),
-    notes_last_contacted: z.string().optional(),
     lifecyclestage: z.string().default("lead")
   })
 });
@@ -78,17 +76,12 @@ export class HubSpotIntegration {
       'all_platform': 'Complete Conversia Platform'
     };
 
-    const interestDisplay = interestMap[formData.interest] || formData.interest;
-    const notes = `Demo Request - Interest: ${interestDisplay}\nMessage: ${formData.message}\nSource: Website Demo Form`;
-
     const contactData = hubspotContactSchema.parse({
       properties: {
         email: formData.email,
         firstname: firstName,
         lastname: lastName,
         company: formData.company,
-        hs_lead_status: "NEW",
-        notes_last_contacted: notes,
         lifecyclestage: "lead"
       }
     });
