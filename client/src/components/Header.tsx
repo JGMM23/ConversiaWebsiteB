@@ -65,7 +65,9 @@ export default function Header() {
             )}
           </nav>
           <a 
-            href="/login" 
+            href="https://app-stage.conversia-ai.io/auth/login" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#B64621] to-[#d65a32] hover:from-[#d65a32] hover:to-[#B64621] text-white font-medium py-2 px-4 rounded-lg transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
           >
             Log In
@@ -107,7 +109,9 @@ export default function Header() {
             )
           )}
           <a 
-            href="/login" 
+            href="https://app-stage.conversia-ai.io/auth/login" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#B64621] to-[#d65a32] hover:from-[#d65a32] hover:to-[#B64621] text-white font-medium py-2 px-4 rounded-lg text-center transition-all shadow-md mt-2"
             onClick={closeMenu}
           >
