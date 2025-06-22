@@ -29,7 +29,8 @@ const formSchema = z.object({
   name: z.string().min(2, { message: "Please enter your name" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
   company: z.string().min(2, { message: "Please enter your company name" }),
-  interest: z.string().min(1, { message: "Please select an area of interest" }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number" }),
+  location: z.string().min(1, { message: "Please select your location" }),
   message: z.string().min(10, { message: "Please tell us a bit more about your needs" }),
 });
 
@@ -45,7 +46,8 @@ export default function GetDemo() {
       name: "",
       email: "",
       company: "",
-      interest: "",
+      phone: "",
+      location: "",
       message: "",
     },
   });
@@ -135,38 +137,52 @@ export default function GetDemo() {
                     />
                   </div>
                   
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-muted">Email Address</FormLabel>
-                        <FormControl>
-                          <Input type="email" placeholder="you@company.com" {...field} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-sm font-medium text-muted">Email Address</FormLabel>
+                          <FormControl>
+                            <Input type="email" placeholder="you@company.com" {...field} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-sm font-medium text-muted">Phone Number</FormLabel>
+                          <FormControl>
+                            <Input type="tel" placeholder="+1 (555) 123-4567" {...field} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
                   
                   <FormField
                     control={form.control}
-                    name="interest"
+                    name="location"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-sm font-medium text-muted">I'm interested in</FormLabel>
+                        <FormLabel className="text-sm font-medium text-muted">Location</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
-                              <SelectValue placeholder="Select your primary interest" />
+                              <SelectValue placeholder="Select your location" />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="vip_program">Early Adopter VIP Program</SelectItem>
-                            <SelectItem value="private_chat">Private Chat Solution</SelectItem>
-                            <SelectItem value="ai_role_play">AI Role Play Training</SelectItem>
-                            <SelectItem value="pre_call_plan">Pre-Call Planning Tool</SelectItem>
-                            <SelectItem value="all_platform">Complete Conversia Platform</SelectItem>
+                            <SelectItem value="united_states">United States</SelectItem>
+                            <SelectItem value="canada">Canada</SelectItem>
+                            <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />

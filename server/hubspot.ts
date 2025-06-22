@@ -34,7 +34,8 @@ export interface DemoFormData {
   name: string;
   email: string;
   company: string;
-  interest: string;
+  phone: string;
+  location: string;
   message: string;
 }
 
@@ -111,21 +112,19 @@ export class HubSpotIntegration {
   }
 
   async createTicket(formData: DemoFormData, contactId?: string): Promise<string> {
-    const interestMap: Record<string, string> = {
-      'vip_program': 'Early Adopter VIP Program',
-      'private_chat': 'Private Chat Solution',
-      'ai_role_play': 'AI Role Play Training',
-      'pre_call_plan': 'Pre-Call Planning Tool',
-      'all_platform': 'Complete Conversia Platform'
+    const locationMap: Record<string, string> = {
+      'united_states': 'United States',
+      'canada': 'Canada',
+      'other': 'Other'
     };
 
-    const interestDisplay = interestMap[formData.interest] || formData.interest;
+    const locationDisplay = locationMap[formData.location] || formData.location;
     
     // Create ticket without associations first
     const ticketData = {
       properties: {
-        subject: `Demo Request: ${formData.company} - ${interestDisplay}`,
-        content: `Demo request from ${formData.name} at ${formData.company}\n\nInterest: ${interestDisplay}\n\nMessage: ${formData.message}\n\nContact Email: ${formData.email}`,
+        subject: `Demo Request: ${formData.company} - ${locationDisplay}`,
+        content: `Demo request from ${formData.name} at ${formData.company}\n\nLocation: ${locationDisplay}\n\nPhone: ${formData.phone}\n\nMessage: ${formData.message}\n\nContact Email: ${formData.email}`,
         hs_pipeline: "0",
         hs_pipeline_stage: "1",
         hs_ticket_priority: "MEDIUM",

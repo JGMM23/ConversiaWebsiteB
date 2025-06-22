@@ -7,7 +7,8 @@ import { createHubSpotClient, type DemoFormData } from "./hubspot";
 
 // Extend our insertContactSchema to include any additional fields needed for the form
 const contactFormSchema = insertContactSchema.extend({
-  interest: z.string()
+  phone: z.string(),
+  location: z.string()
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
@@ -38,7 +39,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
             name: validatedData.name,
             email: validatedData.email,
             company: validatedData.company,
-            interest: validatedData.interest,
+            phone: validatedData.phone,
+            location: validatedData.location,
             message: validatedData.message
           };
           
