@@ -1,0 +1,59 @@
+# Deploy to AWS - Step by Step
+
+Your website files are ready in the `ready-to-deploy` folder. Here's what to do:
+
+## AWS S3 Setup (10 minutes)
+
+### 1. Create S3 Bucket
+- Go to [AWS S3 Console](https://s3.console.aws.amazon.com/)
+- Click "Create bucket"
+- Name: `conversia-ai-yourname` (globally unique)
+- Region: us-east-1 
+- UNCHECK "Block all public access"
+- Create bucket
+
+### 2. Enable Website Hosting
+- Select your bucket
+- Go to "Properties" tab
+- Scroll to "Static website hosting"
+- Click "Edit" → "Enable"
+- Index document: `index.html`
+- Save changes
+
+### 3. Upload Website Files
+- Go to "Objects" tab
+- Click "Upload"
+- Upload `index.html` file
+- Click "Upload"
+
+### 4. Set Public Access Policy
+- Go to "Permissions" tab
+- Click "Bucket policy"
+- Paste this policy (replace YOUR-BUCKET-NAME):
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::YOUR-BUCKET-NAME/*"
+    }
+  ]
+}
+```
+
+### 5. Test Your Website
+- Go to "Properties" → "Static website hosting"
+- Click the website URL
+- Your site should be live!
+
+## Next Steps
+- Set up CloudFront for CDN
+- Connect your GoDaddy domain
+- Enable SSL certificate
+
+Cost: ~$2-5/month for basic hosting
